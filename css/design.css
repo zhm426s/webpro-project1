@@ -1,0 +1,17 @@
+body {
+    /* Light theme colors: */
+    --background-color: #FEEED3;
+    --accent-1: #D5AD79;
+    --accent-2: #7D3D30;
+    --accent-3: #212444;
+    --text-color: #331A09;
+}
+
+body.dark-theme {
+    /* Dark theme colors */
+    --background-color: #000000;
+    --accent-1: #252D36;
+    --accent-2: #55000D;
+    --accent-3: #C90022;
+    --text-color: #FFFFFA;
+}
