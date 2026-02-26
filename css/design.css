@@ -5,6 +5,10 @@ body {
     --accent-2: #7D3D30;
     --accent-3: #212444;
     --text-color: #331A09;
+
+    /* actual body css */
+    background: var(--background-color);
+    font-family: 'Rockwell', 'Garamond', serif;
 }
 
 body.dark-theme {
