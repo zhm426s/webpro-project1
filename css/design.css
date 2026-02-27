@@ -44,3 +44,30 @@ h1 {
     margin: 0.5em;
     text-shadow: 0 0 2px var(--accent-3);
 }
+
+.button {
+    height: 2em;
+    width: 10em;
+    padding: 0.5em;
+    margin: 1em;
+    background: var(--accent-2);
+    border: 2px solid var(--accent-3);
+    border-radius: 5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button > p, a {
+    color: var(--background-color);
+    font-size: 1em;
+}
+
+a:link {
+    color: var(--background-color);
+}
+
+a:visited {
+    color: var(--accent-1);
+}
