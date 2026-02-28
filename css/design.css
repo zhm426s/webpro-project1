@@ -72,3 +72,11 @@ a:link {
 a:visited {
     color: var(--accent-1);
 }
+
+main {
+    padding: 3em 10em;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
