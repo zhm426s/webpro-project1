@@ -59,6 +59,12 @@ h2 {
     font-style: italic;
 }
 
+.spacer {
+    width: 12em;
+    padding: 0 0.5em;
+    margin: 0 2em;
+}
+
 .button {
     height: 2em;
     width: 12em;
