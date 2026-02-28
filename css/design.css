@@ -45,6 +45,12 @@ h1 {
     text-shadow: 0 0 2px var(--accent-3);
 }
 
+h2 {
+    font-size: 2.5em;
+    margin: 0.5em;
+    font-style: italic;
+}
+
 .button {
     height: 2em;
     width: 12em;
