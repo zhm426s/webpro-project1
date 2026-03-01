@@ -93,6 +93,18 @@ a:visited {
     color: var(--accent-1);
 }
 
+nav {
+    background: var(--accent-2);
+    border-width: 0 0 4px 0;
+    border-color: var(--accent-3);
+    border-style: solid;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0.1em;
+}
+
 main {
     padding: 3em 10em;
     align-items: center;
