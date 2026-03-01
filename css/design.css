@@ -105,6 +105,23 @@ nav {
     padding: 0.1em;
 }
 
+.nav-button {
+    background: var(--accent-3);
+    padding: 0 0.6em;
+    margin: 0.5em;
+    border-radius: 12px;
+}
+
+.nav-button > p {
+    font-size: 0.9em;
+}
+
+.this-screen {
+    background: var(--background-color);
+    font-weight: bold;
+    font-style: italic;
+}
+
 main {
     padding: 3em 10em;
     align-items: center;
