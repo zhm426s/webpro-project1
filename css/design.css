@@ -180,11 +180,11 @@ footer {
 }
 
 .board-evidence {
-    width: 9%;
+    width: 10%;
 }
 
 .board-evidence:hover {
-    width: 10%;
+    width: 11%;
 }
 
 .board-label {
@@ -222,7 +222,7 @@ footer {
 
 #weapon {
     top: 54%;
-    left: 33%;
+    left: 32.5%;
     z-index: 2;
 }
 
@@ -232,7 +232,7 @@ footer {
 
 #ev1 {
     width: 15%;
-    top: 12%;
+    top: 17%;
     left: 10%;
     z-index: 6;
 }
@@ -241,14 +241,34 @@ footer {
     width: 16%;
 }
 
+#ev2 {
+    top: 45%;
+    left: 7%;
+}
+
+#ev3 {
+    top: 45%;
+    left: 18%
+}
+
+#ev4 {
+    top: 55%;
+    left: 7%
+}
+
+#ev5 {
+    top: 55%;
+    left: 18%
+}
+
 #report-label {
-    top: 6%;
+    top: 11%;
     left: 13%;
     z-index: 6;
 }
 
 #weapon-label {
-    top: 63%;
+    top: 65%;
     left: 31%;
 }
 
@@ -256,4 +276,10 @@ footer {
     width: 15%;
     left: 30%;
     top: 45%;
+}
+
+
+#ev-label1 {
+    top: 38%;
+    left: 12.5%
 }
