@@ -261,6 +261,31 @@ footer {
     left: 18%
 }
 
+#ev6 { 
+    top: 25%;
+    left: 50%;
+}
+
+#ev7 { 
+    top: 40%;
+    left: 50%;
+}
+
+#ev8 { 
+    top: 55%;
+    left: 50%;
+}
+
+#ev9 { 
+    top: 70%;
+    left: 50%;
+}
+
+#ev-label2 { 
+    top: 18%;
+    left: 51.5%;
+}
+
 #report-label {
     top: 11%;
     left: 13%;
