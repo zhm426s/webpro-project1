@@ -135,6 +135,39 @@ footer {
     border-width: 4px 0 0 0;
 }
 
+#case-board {
+    position: relative;
+    height: 200em;
+}
+
 #case-board-bg {
     width: 100%;
+}
+
+.board-evidence, .board-suspect, #victim, #victim-caption {
+    position: absolute;
+}
+
+#victim {
+    width: 15%;
+    left: 30%;
+    top: 15%;
+    border: 2px solid var(--background-color);
+}
+
+.caption {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#victim-caption {
+    background: var(--background-color);
+    width: 15.3%;
+    text-align: center;
+    left: 30%;
+    top: 45%;
+}
+
+.caption:hover {
+    opacity: 1;
 }
