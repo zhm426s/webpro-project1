@@ -155,41 +155,53 @@ footer {
     border: 2px solid var(--background-color);
 }
 
-.board-sus-image {
+.board-sus-image, .board-ev-image {
     width: 100%;
     border: 2px solid var(--background-color);
     transition: box-shadow 1s;
 }
 
-.board-sus-image:hover {
+.board-sus-image:hover, .board-ev-image:hover {
     box-shadow: 0 0 10px var(--accent-3);
 }
 
-.board-suspect {
+.board-suspect, .board-evidence {
     display: block;
-    width: 11%;
     transition: width 1s;
+}
+
+.board-suspect {
+    width: 11%;
 }
 
 .board-suspect:hover {
     width: 12%;
 }
 
+.board-evidence {
+    width: 9%;
+}
+
+.board-evidence:hover {
+    width: 10%;
+}
+
 .board-label {
     background: var(--background-color);
-    font-size: 2em;
     font-style: italic;
     padding: 0.2em;
+    text-align: center;
 }
 
 #board-sus-label {
     top: 3%;
-    left: 70%;
+    left: 73%;
+    font-size: 2em;
 }
 
 #sus1 {
     top: 15%;
-    left: 60%;
+    left: 65%;
 }
 
 #sus2 {
@@ -198,28 +210,32 @@ footer {
 }
 
 #sus3 {
-    top: 50%;
-    left: 60%;
+    top: 45%;
+    left: 65%;
 }
 
 #sus4 {
-    top: 50%;
+    top: 45%;
     left: 80%;
 }
 
-.caption {
-    opacity: 0;
-    transition: opacity 1s;
+#weapon {
+    top: 54%;
+    left: 33%;
+    z-index: 2;
 }
 
-#victim-caption {
+#weapon-img {
     background: var(--background-color);
-    width: 15.3%;
-    text-align: center;
+}
+
+#weapon-label {
+    top: 63%;
+    left: 31%;
+}
+
+#victim-label {
+    width: 15%;
     left: 30%;
     top: 45%;
-}
-
-.caption:hover {
-    opacity: 1;
 }
