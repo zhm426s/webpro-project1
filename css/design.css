@@ -230,6 +230,23 @@ footer {
     background: var(--background-color);
 }
 
+#ev1 {
+    width: 15%;
+    top: 12%;
+    left: 10%;
+    z-index: 6;
+}
+
+#ev1:hover {
+    width: 16%;
+}
+
+#report-label {
+    top: 6%;
+    left: 13%;
+    z-index: 6;
+}
+
 #weapon-label {
     top: 63%;
     left: 31%;
