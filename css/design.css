@@ -303,8 +303,37 @@ footer {
     top: 45%;
 }
 
-
 #ev-label1 {
     top: 38%;
     left: 12.5%
+}
+
+#hints {
+    text-align: center;
+}
+
+#hint-grid {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.hint-card {
+    background: var(--accent-3);
+    color: var(--background-color);
+    margin: 1em;
+    padding: 1em 2em;
+    border: 2px solid var(--accent-1);
+    border-radius: 10px;
+}
+
+.hint-card > p {
+    color: var(--background-color);
+}
+
+.hint-card > h3 {
+    font-size: 1.75em;
+    font-style: italic;
+    text-shadow: 0 0 4px var(--accent-2);
 }
