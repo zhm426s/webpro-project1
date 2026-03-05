@@ -144,7 +144,7 @@ footer {
     width: 100%;
 }
 
-.board-evidence, .board-suspect, #victim, #victim-caption {
+.board-evidence, .board-suspect, #victim, .caption, .board-sus-image, .board-label {
     position: absolute;
 }
 
@@ -153,6 +153,58 @@ footer {
     left: 30%;
     top: 15%;
     border: 2px solid var(--background-color);
+}
+
+.board-sus-image {
+    width: 100%;
+    border: 2px solid var(--background-color);
+    transition: box-shadow 1s;
+}
+
+.board-sus-image:hover {
+    box-shadow: 0 0 10px var(--accent-3);
+}
+
+.board-suspect {
+    display: block;
+    width: 11%;
+    transition: width 1s;
+}
+
+.board-suspect:hover {
+    width: 12%;
+}
+
+.board-label {
+    background: var(--background-color);
+    font-size: 2em;
+    font-style: italic;
+    padding: 0.2em;
+}
+
+#board-sus-label {
+    top: 3%;
+    left: 70%;
+}
+
+#sus1 {
+    top: 15%;
+    left: 60%;
+}
+
+#sus2 {
+    top: 15%;
+    left: 80%;
+}
+
+#sus3 {
+    top: 50%;
+    left: 60%;
+}
+
+#sus4 {
+    top: 50%;
+    left: 80%;
 }
 
 .caption {
