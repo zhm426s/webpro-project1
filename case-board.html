@@ -37,58 +37,66 @@
                 <p>Click on a piece of evidence to view it on the evidence/suspects board.</p>
             </div>
             <div id="case-board">
-                <img id="case-board-bg" src="images/case-board.jpg" alt="case board">
-                <a class="board-evidence" id="weapon" href="evidence.html#weapon"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" id="weapon-img" src="images/evidence/bat.png" alt="a bat with blood on it">
-                </a>
-                <p class="board-label" id="weapon-label">Weapon: Baseball Bat</p>
-                <a class="board-evidence" id="ev1" href="evidence.html#evidence1"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/MEreport1.png" alt="medical examiner's report">
-                </a>
-                <p class="board-label" id="report-label">ME's Report</p>
-                <a class="board-evidence" id="ev2" href="evidence.html#evidence2"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/IsaacKatyTexts.png" alt="iMessage texts between Isaac and Katy">
-                </a>
-                <a class="board-evidence" id="ev3" href="evidence.html#evidence3"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/IsaacNateTexts.png" alt="iMessage texts between Isaac and Nate">
-                </a>
-                <a class="board-evidence" id="ev4" href="evidence.html#evidence4"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/IsaacDannyTexts.png" alt="iMessage texts between Isaac and Danny">
-                </a>
-                <a class="board-evidence" id="ev5" href="evidence.html#evidence5"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/IsaacSharonTexts.png" alt="iMessage texts between Isaac and Sharon">
-                </a>
-                <p class="board-label" id="ev-label1">Text Receipts</p>
-                <a class="board-evidence" id="ev6" href="evidence.html#evidence6"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/KatyStatement.png" alt="Katy's Statement">
-                </a>
-                <a class="board-evidence" id="ev7" href="evidence.html#evidence7"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/NateStatement.png" alt="Nate's Statement">
-                </a>
-                <a class="board-evidence" id="ev8" href="evidence.html#evidence8"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/DannyStatement.png" alt="Danny's Statement">
-                </a>
-                <a class="board-evidence" id="ev9" href="evidence.html#evidence9"> <!--copy this link and fill in evidence name for this piece-->
-                    <img class="board-ev-image" src="images/evidence/SharonStatement.png" alt="Sharon's Statement">
-                </a>
-                <p class="board-label" id="ev-label2">Statements</p>
-
-                <p class="board-label" id="board-sus-label">Suspects</p>
-                <a class="board-suspect" id="sus1" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
-                    <img class="board-sus-image" src="images/suspects/nate.jpg" alt="a man leaning against a wall">
-                </a>
-                <a class="board-suspect" id="sus2" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
-                    <img class="board-sus-image" src="images/suspects/danny.jpg" alt="a closeup of a man's face, looking away">
-                </a>
-                <a class="board-suspect" id="sus3" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
-                    <img class="board-sus-image" src="images/suspects/katy.jpg" alt="a woman looking at a flower">
-                </a>
-                <a class="board-suspect" id="sus4" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
-                    <img class="board-sus-image" src="images/suspects/sharon.jpg" alt="a woman smiling">
-                </a>
-                <div>
-                    <img id="victim" src="images/isaac.jpg" alt=" man in a red sweater">
+                <div class="board-col">
+                    <p class="board-label" id="report-label">ME's Report</p>
+                    <a class="board-evidence" id="ev1" href="evidence.html#evidence1"> <!--copy this link and fill in evidence name for this piece-->
+                        <img class="board-ev-image" src="images/evidence/MEreport1.png" alt="medical examiner's report">
+                    </a>
+                    <p class="board-label" id="ev-label1">Text Receipts</p>
+                    <div id="ev-grid">
+                        <a class="board-evidence" id="ev2" href="evidence.html#evidence2"> <!--copy this link and fill in evidence name for this piece-->
+                            <img class="board-ev-image" src="images/evidence/IsaacKatyTexts.png" alt="iMessage texts between Isaac and Katy">
+                        </a>
+                        <a class="board-evidence" id="ev3" href="evidence.html#evidence3"> <!--copy this link and fill in evidence name for this piece-->
+                            <img class="board-ev-image" src="images/evidence/IsaacNateTexts.png" alt="iMessage texts between Isaac and Nate">
+                        </a>
+                        <a class="board-evidence" id="ev4" href="evidence.html#evidence4"> <!--copy this link and fill in evidence name for this piece-->
+                            <img class="board-ev-image" src="images/evidence/IsaacDannyTexts.png" alt="iMessage texts between Isaac and Danny">
+                        </a>
+                        <a class="board-evidence" id="ev5" href="evidence.html#evidence5"> <!--copy this link and fill in evidence name for this piece-->
+                            <img class="board-ev-image" src="images/evidence/IsaacSharonTexts.png" alt="iMessage texts between Isaac and Sharon">
+                        </a>
+                    </div>
+                </div>
+                <div class="board-col">
+                    <img id="victim" src="images/isaac.jpg" alt="man in a red sweater">
                     <p id="victim-label" class="board-label">Victim: Isaac Harlow</p> <!--victims name-->
+                    <a class="board-evidence" id="weapon" href="evidence.html#weapon"> <!--copy this link and fill in evidence name for this piece-->
+                        <img class="board-ev-image" id="weapon-img" src="images/evidence/bat.png" alt="a bat with blood on it">
+                    </a>
+                    <p class="board-label" id="weapon-label">Weapon: Baseball Bat</p>
+                </div>
+                <div class="board-col">
+                    <p class="board-label" id="ev-label2">Statements</p>
+                    <a class="board-evidence" id="ev6" href="evidence.html#evidence6"> <!--copy this link and fill in evidence name for this piece-->
+                        <img class="board-ev-image" src="images/evidence/KatyStatement.png" alt="Katy's Statement">
+                    </a>
+                    <a class="board-evidence" id="ev7" href="evidence.html#evidence7"> <!--copy this link and fill in evidence name for this piece-->
+                        <img class="board-ev-image" src="images/evidence/NateStatement.png" alt="Nate's Statement">
+                    </a>
+                    <a class="board-evidence" id="ev8" href="evidence.html#evidence8"> <!--copy this link and fill in evidence name for this piece-->
+                        <img class="board-ev-image" src="images/evidence/DannyStatement.png" alt="Danny's Statement">
+                    </a>
+                    <a class="board-evidence" id="ev9" href="evidence.html#evidence9"> <!--copy this link and fill in evidence name for this piece-->
+                        <img class="board-ev-image" src="images/evidence/SharonStatement.png" alt="Sharon's Statement">
+                    </a>
+                </div>
+                <div class="board-col" id="sus-col">
+                    <p class="board-label" id="board-sus-label">Suspects</p>
+                    <div id="sus-grid">
+                        <a class="board-suspect" id="sus1" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
+                            <img class="board-sus-image" src="images/suspects/nate.jpg" alt="a man leaning against a wall">
+                        </a>
+                        <a class="board-suspect" id="sus2" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
+                            <img class="board-sus-image" src="images/suspects/danny.jpg" alt="a closeup of a man's face, looking away">
+                        </a>
+                        <a class="board-suspect" id="sus3" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
+                            <img class="board-sus-image" src="images/suspects/katy.jpg" alt="a woman looking at a flower">
+                        </a>
+                        <a class="board-suspect" id="sus4" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
+                            <img class="board-sus-image" src="images/suspects/sharon.jpg" alt="a woman smiling">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div id="hints">
