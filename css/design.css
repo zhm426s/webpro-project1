@@ -9,6 +9,7 @@ body {
     --accent-2: #7D3D30;
     --accent-3: #212444;
     --text-color: #331A09;
+    --focus-color: #d7814b;
 
     /* actual body css */
     background: var(--background-color);
@@ -26,6 +27,7 @@ body.dark-theme {
     --accent-2: #da313a;
     --accent-3: #eed6d7;
     --text-color: #FFFFFA;
+    --focus-color: #661719;
 }
 
 header, footer {
@@ -91,6 +93,12 @@ a:link {
 
 a:visited {
     color: var(--accent-1);
+}
+
+a:focus {
+    background: var(--focus-color);
+    color: var(--accent-3);
+    border-radius: 2px;
 }
 
 nav {
@@ -159,13 +167,18 @@ footer {
 }
 
 .board-sus-image, .board-ev-image {
-    width: 100%;
+    width: 95%;
     border: 2px solid var(--background-color);
     transition: box-shadow 1s;
 }
 
 .board-sus-image:hover, .board-ev-image:hover {
     box-shadow: 0 0 10px var(--accent-3);
+}
+
+.board-suspect:focus, .board-evidence:focus {
+    border: 4px solid var(--focus-color);
+    border-radius: 4px;
 }
 
 .board-suspect, .board-evidence {
@@ -175,6 +188,7 @@ footer {
 
 .board-suspect {
     width: 11%;
+    height: 27%;
 }
 
 .board-suspect:hover {
