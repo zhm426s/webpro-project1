@@ -369,4 +369,6 @@ footer {
 .arrest-button {
     margin: 0;
     width: 90%;
+    background: var(--accent-3);
+    border-color: var(--accent-2);
 }
