@@ -23,8 +23,6 @@ html {
 }
 
 body {
-
-
     /* actual body css */
     background: var(--background-color);
     font-family: 'Rockwell', 'Garamond', serif;
@@ -32,6 +30,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.5s;
 }
 
 header, footer {
@@ -43,6 +42,7 @@ header, footer {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
+    transition: background-color 0.5s, border-color 0.5s;
 }
 
 header {
@@ -51,12 +51,14 @@ header {
 
 h1, h2, p {
     color: var(--text-color);
+    transition: color 0.5s;
 }
 
 h1 {
     font-size: 2.5em;
     margin: 1em;
     text-shadow: 0 0 2px var(--accent-3);
+    transition: text-shadow 0.5s;
 }
 
 h2 {
@@ -79,10 +81,12 @@ h2 {
     height: 1em;
     border-radius: 20px;
     margin: 0 0.5em;
+    transition: background-color 0.5s;
 }
 
 #theme-tog:focus {
     outline: 2px solid var(--focus-color);
+    transition: outline 0.5s;
 }
 
 .button {
@@ -97,13 +101,14 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s, border-color 0.5s;
 }
 
 .button > p, a {
     color: var(--background-color);
     font-size: 1em;
     font-weight: bold;
-    transition: font-size 1s;
+    transition: font-size 1s, color 0.5s;
 }
 
 .button > p:hover {
@@ -112,10 +117,12 @@ h2 {
 
 a:link {
     color: var(--background-color);
+    transition: color 0.5s;
 }
 
 a:visited {
     color: var(--accent-1);
+    transition: color 0.5s;
 }
 
 a:focus {
@@ -123,6 +130,7 @@ a:focus {
     color: var(--accent-3);
     outline: 2px solid var(--focus-color);
     border-radius: 2px;
+    transition: background-color 0.5s, color 0.5s, outline-color 0.5s;
 }
 
 nav {
@@ -136,6 +144,7 @@ nav {
     justify-content: center;
     padding: 0.1em;
     z-index: 10;
+    transition: background-color 0.5s, border-color 0.5s;
 }
 
 .nav-button {
@@ -143,6 +152,7 @@ nav {
     padding: 0 0.6em;
     margin: 0.5em;
     border-radius: 12px;
+    transition: background-color 0.5s;
 }
 
 .nav-button > p {
@@ -157,6 +167,7 @@ nav {
     background: var(--background-color);
     font-weight: bold;
     font-style: italic;
+    transition: background-color 0.5s;
 }
 
 main {
@@ -192,12 +203,13 @@ footer {
     left: 30%;
     top: 15%;
     border: 2px solid var(--background-color);
+    transition: background-color 0.5s;
 }
 
 .board-sus-image, .board-ev-image {
     width: 95%;
     border: 2px solid var(--background-color);
-    transition: box-shadow 1s;
+    transition: box-shadow 1s, background-color 0.5s;
 }
 
 .board-sus-image:hover, .board-ev-image:hover {
@@ -236,6 +248,7 @@ footer {
     font-style: italic;
     padding: 0.2em;
     text-align: center;
+    transition: background-color 0.5s;
 }
 
 #board-sus-label {
@@ -272,6 +285,7 @@ footer {
 
 #weapon-img {
     background: var(--background-color);
+    transition: background-color 0.5s;
 }
 
 #ev1 {
@@ -371,6 +385,7 @@ footer {
     padding: 1em 2em;
     border: 2px solid var(--accent-1);
     border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
 
 }
 
@@ -379,6 +394,7 @@ footer {
     opacity: 0;
     height: 0;
     transition: opacity 1s, height 1s;
+    transition: color 0.5s;
 }
 
 .hint-card > h3 {
@@ -386,6 +402,7 @@ footer {
     font-style: italic;
     margin-bottom: 0;
     text-shadow: 0 0 4px var(--accent-2);
+    transition: text-shadow 0.5s;
 }
 
 .hint-card > input[type="checkbox"] {
@@ -399,14 +416,17 @@ footer {
     height: 2em;
     margin: 0;
     opacity: 1;
+    transition: background-color 0.5s;
 }
 
 .hint-card > input[type="checkbox"]:focus {
     outline: 3px solid var(--focus-color);
+    transition: outline-color 0.5s;
 }
 
 .hint-card > input[type="checkbox"]:checked {
     background: var(--accent-1);
+    transition: background-color;
 }
 
 #hint-1-tog:checked ~ #hint-text-1, #hint-2-tog:checked ~ #hint-text-2, #hint-3-tog:checked ~ #hint-text-3, #hint-4-tog:checked ~ #hint-text-4{
@@ -430,6 +450,7 @@ footer {
     margin: 1em;
     width: 23%;
     align-items: center;
+    transition: border-color 0.5s;
 }
 
 .suspect-img {
@@ -445,14 +466,17 @@ footer {
     width: 90%;
     background: var(--accent-3);
     border-color: var(--accent-2);
+    transition: background-color 0.5s, border-color 0.5s;
 }
 
 .arr-link {
     color: var(--background-color);
     transition: color 1s, font-size 2s;
+    transition: background-color 0.5s;
 }
 
 .arr-link:hover {
     font-size: 1.2em;
     color: var(--focus-color);
+    transition: color 0.5s, ;
 }
