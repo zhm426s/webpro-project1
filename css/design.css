@@ -267,8 +267,13 @@ footer {
     width: 80%;
 }
 
-#board-sus-label, #victim-label {
+#board-sus-label {
     font-size: 2em;
+}
+
+#victim-label {
+    text-shadow: 0 0 3px var(--accent-2);
+    transition: text-shadow 0.5s;
 }
 
 #weapon-img {
