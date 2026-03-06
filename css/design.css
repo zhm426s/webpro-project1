@@ -1,13 +1,4 @@
-html {
-    height: 100%;
-}
-
-input {
-    opacity: 0;
-    height: 0.05em;
-}
-
-body {
+:root {
     /* Light theme colors: */
     --background-color: #FEEED3;
     --accent-1: #D5AD79;
@@ -15,6 +6,24 @@ body {
     --accent-3: #212444;
     --text-color: #331A09;
     --focus-color: #d7814b;
+}
+
+:has(#theme-tog:checked) {
+    /* Dark theme colors */
+    --background-color: #000000;
+    --accent-1: #252D36;
+    --accent-2: #da313a;
+    --accent-3: #eed6d7;
+    --text-color: #FFFFFA;
+    --focus-color: #661719;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+
 
     /* actual body css */
     background: var(--background-color);
@@ -23,16 +32,6 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-body.dark-theme {
-    /* Dark theme colors */
-    --background-color: #000000;
-    --accent-1: #252D36;
-    --accent-2: #da313a;
-    --accent-3: #eed6d7;
-    --text-color: #FFFFFA;
-    --focus-color: #661719;
 }
 
 header, footer {
@@ -70,6 +69,20 @@ h2 {
     width: 12em;
     padding: 0 0.5em;
     margin: 0 2em;
+}
+
+#theme-tog {
+    appearance: none;
+    opacity: 1;
+    background: var(--accent-2);
+    width: 1em;
+    height: 1em;
+    border-radius: 20px;
+    margin: 0 0.5em;
+}
+
+#theme-tog:focus {
+    outline: 2px solid var(--focus-color);
 }
 
 .button {
