@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/design.css">
     </head>
-    <body>
+    <body class="dark-theme">
         <header>
             <div class="button" id="theme-switch">
                 <p>Switch Theme</p>
@@ -90,36 +90,48 @@
             </div>
             <div id="hints">
                 <h2>Hints</h2>
-                <p>Having trouble? Hover over a hint to get an idea of where to look.</p>
+                <p>Having trouble? Click on a hint to get an idea of where to look.</p>
                 <div id="hint-grid">
+                    <label for="hint-1-tog">
                     <div class="hint-card" id="hint-1"> <!--copy this div and fill in hint number/text for this hint-->
                         <h3>Hint #1</h3>
-                        <p>Check out interviews with these four connected persons: <a href="evidence.html#evidence10">Rosie Vu</a>
+                        <input type="checkbox" id="hint-1-tog">
+                        <p id="hint-text-1">Check out interviews with these four connected persons: <a href="evidence.html#evidence10">Rosie Vu</a>
                         , <a href="evidence.html#evidence11">Jacob Garner</a>, <a href="evidence.html#evidence12">Grace Beckham</a>, 
                         <a href="evidence.html#evidence13">Joshua Clarke</a>. What impressions do you get of the suspects?</p>
                     </div>
-                    <div class="hint-card" id="hint-2"> <!--copy this div and fill in hint number/text for this hint-->
+                    </label>
+                    <label for="hint-2-tog">
+                    <div class="hint-card" id="hint-2" for="hint-2-tog"> <!--copy this div and fill in hint number/text for this hint-->
                         <h3>Hint #2</h3>
-                        <p>Katy and Nate both voluntarily turned their phone into the police. One text conversation each 
+                        <input type="checkbox" id="hint-2-tog">
+                        <p id="hint-text-2">Katy and Nate both voluntarily turned their phone into the police. One text conversation each 
                             was collected from their data: Katy's texts with her friend, <a href="evidence.html#evidence14">Rosie</a>, 
                             and Nate's texts with he and Isaac's friend, <a href="evidence.html#evidence15">Joshua</a>. Does  any of
                             this lead you to trust or distrust either of them?
                         </p>
                     </div>
-                    <div class="hint-card" id="hint-3"> <!--copy this div and fill in hint number/text for this hint-->
+                    </label>
+                    <label for="hint-3-tog">
+                    <div class="hint-card" id="hint-3" for="hint-3-tog"> <!--copy this div and fill in hint number/text for this hint-->
                         <h3>Hint #3</h3>
-                        <p>Take a close look at <a href="evidence.html#evidence8">Danny's Statement</a> and <a href="evidence.html#evidence7">Nate's statement</a>. 
+                        <input type="checkbox" id="hint-3-tog">
+                        <p id="hint-text-3">Take a close look at <a href="evidence.html#evidence8">Danny's Statement</a> and <a href="evidence.html#evidence7">Nate's statement</a>. 
                             How do these line up with <a href="evidence.html#evidence3">Isaac and Nate's Texts</a> and <a href="evidence.html#evidence4">Isaac and Danny's texts</a>? 
                             Does either roommate seem more or less genuine?
                         </p>
                     </div>
-                    <div class="hint-card" id="hint-4"> <!--copy this div and fill in hint number/text for this hint-->
+                    </label>
+                    <label for="hint-4-tog">
+                    <div class="hint-card" id="hint-4" for="hint-4-tog"> <!--copy this div and fill in hint number/text for this hint-->
                         <h3>Hint #4</h3>
-                        <p>The Medical Examiner's report tells us that Isaac was poisoned with Strychnine, a chemical common in poison
+                        <input type="checkbox" id="hint-4-tog">
+                        <p id="hint-text-4">The Medical Examiner's report tells us that Isaac was poisoned with Strychnine, a chemical common in poison
                             for rats and other rodents, shortly before being beaten. Check out this <a href="evidence.html#evidence16">Bottle of Gopher Poison</a> 
                             found in the apartment. Who came into contact with it?
                         </p>
                     </div>
+                    </label>
                     </div>
                 </div>
             </div>
