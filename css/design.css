@@ -187,7 +187,6 @@ footer {
 
 #case-board {
     position: relative;
-    height: 800px;
 }
 
 #case-board-bg {
@@ -339,6 +338,11 @@ footer {
     left: 50%;
 }
 
+#ev-label1 {
+    top: 38%;
+    left: 12.5%
+}
+
 #ev-label2 { 
     top: 18%;
     left: 51.5%;
@@ -359,11 +363,6 @@ footer {
     width: 15%;
     left: 30%;
     top: 45%;
-}
-
-#ev-label1 {
-    top: 38%;
-    left: 12.5%
 }
 
 #hints {
