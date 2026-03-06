@@ -395,3 +395,13 @@ footer {
     background: var(--accent-3);
     border-color: var(--accent-2);
 }
+
+.arr-link {
+    color: var(--background-color);
+    transition: color 1s, font-size 2s;
+}
+
+.arr-link:hover {
+    font-size: 1.2em;
+    color: var(--focus-color);
+}
