@@ -136,6 +136,8 @@ footer {
     border-width: 4px 0 0 0;
 }
 
+/* for Case Board Page */
+
 #case-board {
     position: relative;
     height: 200em;
@@ -336,4 +338,35 @@ footer {
     font-size: 1.75em;
     font-style: italic;
     text-shadow: 0 0 4px var(--accent-2);
+}
+
+/* for Suspects page */
+
+.suspects {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    width: 95%;
+}
+
+.suspect-card {
+    border: 2px solid var(--accent-2);
+    border-radius: 10px;
+    padding: 2em;
+    margin: 1em;
+    width: 23%;
+    align-items: center;
+}
+
+.suspect-img {
+    width: 90%;
+}
+
+.suspect-info {
+    font-size: 0.75em;
+}
+
+.arrest-button {
+    margin: 0;
+    width: 90%;
 }
