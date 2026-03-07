@@ -85,7 +85,7 @@ h2 {
 }
 
 #theme-tog:focus {
-    outline: 2px solid var(--focus-color);
+    outline: 3px solid var(--focus-color);
     transition: outline 0.5s;
 }
 
@@ -107,6 +107,7 @@ h2 {
 .button > p, .button > a {
     color: var(--background-color);
     font-size: 1em;
+    font-weight: bold;
     transition: font-size 1s, color 0.5s;
 }
 
