@@ -308,8 +308,7 @@ footer {
     color: var(--background-color);
     opacity: 0;
     height: 0;
-    transition: opacity 1s, height 1s;
-    transition: color 0.5s;
+    transition: opacity 1s, height 1s, color 0.5s;
 }
 
 .hint-card > h3 {
@@ -384,14 +383,20 @@ footer {
     transition: background-color 0.5s, border-color 0.5s;
 }
 
+.arrest-button > p {
+    font-size: 1;
+    transition: font-size 2s;
+}
+
+.arrest-button > p:hover {
+    font-size: 1.2em;
+}
+
 .arr-link {
     color: var(--background-color);
-    transition: color 1s, font-size 2s;
-    transition: background-color 0.5s;
+    transition: color 1s;
 }
 
 .arr-link:hover {
-    font-size: 1.2em;
     color: var(--focus-color);
-    transition: color 0.5s, ;
 }
