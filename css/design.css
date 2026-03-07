@@ -396,11 +396,25 @@ footer {
     font-size: 1.2em;
 }
 
+@keyframes shakeText {
+    0% {top: 0; left: 0;}
+    20% {top: 0.5px; left: -0.5px;}
+    40% {top: 0; left: 1px;}
+    60% {top: 0.5px; left: 0;}
+    80% {top: -0.5px; left: -0.5px;}
+    100% {top: -0.5px; left: 0px;}
+}
+
 .arr-link {
+    position: relative;
     color: var(--background-color);
     transition: color 1s;
 }
 
 .arr-link:hover {
     color: var(--focus-color);
+    animation-name: shakeText;
+    animation-duration: 0.25s;
+    animation-delay: 0.25s;
+    animation-iteration-count: infinite;
 }
