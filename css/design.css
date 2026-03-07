@@ -76,12 +76,16 @@ h2 {
 #theme-tog {
     appearance: none;
     opacity: 1;
-    background: var(--accent-2);
-    width: 1em;
-    height: 1em;
+    background-image: url(../images/light-icon.png);
+    background-size: 100%;
+    width: 1.2em;
+    height: 1.2em;
     border-radius: 20px;
     margin: 0 0.5em;
-    transition: background-color 0.5s;
+}
+
+#theme-tog:checked {
+    background-image: url(../images/dark-icon.png);
 }
 
 #theme-tog:focus {
