@@ -186,6 +186,11 @@ footer {
     border-width: 4px 0 0 0;
 }
 
+#disclaimer {
+    text-align: center;
+    width: 30em;
+}
+
 /* for Case Board Page */
 
 #case-board {
@@ -422,4 +427,4 @@ footer {
     animation-duration: 0.25s;
     animation-delay: 0.25s;
     animation-iteration-count: infinite;
-}
+} 
