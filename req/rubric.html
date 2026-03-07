@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 Grading Rubric | CSC 4370/6370</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site-icons.css">
+    <script defer src="site-icons.js"></script>
+    <style>
+        :root {
+            --primary: #5b8fa3;
+            --secondary: #7ba7c4;
+            --accent: #a8c5d9;
+            --warning: #d4a574;
+            --success: #8fb8a8;
+            --purple: #9b8aa5;
+            --text-light: #4a5568;
+            --text-lighter: #2d3748;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --radius-md: 8px;
+            --radius-lg: 10px;
+            --radius-xl: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f7fa 50%, #f5f9fc 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--space-sm) 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--card-border);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-lighter);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .nav-logo i {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.45rem 0.8rem;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-md);
+        }
+
+        header {
+            background: linear-gradient(135deg, #7ba7c4 0%, #5b8fa3 50%, #6b8e9f 100%);
+            color: white;
+            padding: var(--space-xl) 0;
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: var(--space-xs);
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            color: var(--text-lighter);
+            margin-bottom: var(--space-sm);
+            font-size: 1.4rem;
+        }
+
+        .criteria-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--space-sm);
+            font-size: 0.92rem;
+        }
+
+        .criteria-table th,
+        .criteria-table td {
+            border: 1px solid var(--card-border);
+            padding: 0.8rem;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .criteria-table th {
+            background: #edf2f7;
+            color: var(--text-lighter);
+        }
+
+        .points-cell {
+            font-weight: 700;
+            text-align: center;
+            background: #f8fafc;
+            min-width: 90px;
+        }
+
+        .requirement-item {
+            margin-bottom: 0.4rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .requirement-item::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+
+        .penalty-item {
+            margin-bottom: 0.35rem;
+            padding-left: 1.1rem;
+            position: relative;
+            color: #b91c1c;
+        }
+
+        .penalty-item::before {
+            content: "⚠";
+            position: absolute;
+            left: 0;
+        }
+
+        .callout {
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-top: var(--space-sm);
+        }
+
+        .callout.info {
+            background: #f0f9ff;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .callout.success {
+            background: #f0fdf4;
+            border-left: 4px solid var(--success);
+        }
+
+        .callout.warning {
+            background: #fef3c7;
+            border-left: 4px solid var(--warning);
+        }
+
+        .callout.strict {
+            background: #fef2f2;
+            border-left: 4px solid #dc2626;
+        }
+
+        .strict-alert {
+            position: relative;
+            border: 2px solid #dc2626;
+            box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .strict-alert.active {
+            animation: strictPulse 1.4s ease-in-out infinite;
+        }
+
+        .strict-alert.flash {
+            animation: strictShake 0.45s ease-in-out 2;
+        }
+
+        .strict-alert-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+            margin-bottom: 0.45rem;
+        }
+
+        .strict-alert-pill {
+            background: #dc2626;
+            color: white;
+            border-radius: 999px;
+            padding: 0.25rem 0.7rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .strict-ack-btn {
+            border: 1px solid #dc2626;
+            background: white;
+            color: #b91c1c;
+            border-radius: var(--radius-md);
+            padding: 0.4rem 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .strict-ack-btn:hover {
+            background: #b91c1c;
+            color: white;
+        }
+
+        .strict-alert.acknowledged {
+            border-color: #9ca3af;
+            box-shadow: none;
+            opacity: 0.92;
+        }
+
+        .strict-alert.acknowledged .strict-alert-pill {
+            background: #6b7280;
+        }
+
+        @keyframes strictPulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.35); }
+            70% { box-shadow: 0 0 0 14px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+
+        @keyframes strictShake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-6px); }
+            40% { transform: translateX(6px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+
+        .totals {
+            background: #f8fafc;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-top: var(--space-sm);
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed var(--card-border);
+            padding: 0.45rem 0;
+        }
+
+        .total-row.final {
+            border-bottom: none;
+            border-top: 2px solid var(--card-border);
+            margin-top: 0.45rem;
+            padding-top: 0.6rem;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            margin-top: var(--space-xl);
+            text-align: center;
+            padding: var(--space-lg);
+            color: var(--text-light);
+            border-top: 1px solid var(--card-border);
+            background: #f8fafc;
+        }
+
+        @media (max-width: 768px) {
+            .criteria-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .nav-links {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-code"></i>
+                CSC 4370/6370
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Return to Project</a></li>
+                <li><a href="team-intro.html"><i class="fas fa-users"></i> Team Intro</a></li>
+                <li><a href="rubric.html" class="active"><i class="fas fa-clipboard-check"></i> Grading Rubric</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-clipboard-check"></i> Project 1 | CSS Grading Rubric</h1>
+            <p class="subtitle">CSC 4370/6370 | HTML & CSS Project | Clean, transparent, scope-aligned grading</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Scope & Submission Rules</h2>
+            <div class="callout.warning">
+                <strong><i class="fas fa-bullseye"></i> Project Scope:</strong> This rubric is for Project 1 (HTML/CSS only). Focus on semantic structure, responsive layout, transforms, transitions, animations, and accessibility.
+            </div>
+            <div class="callout.info">
+                <strong><i class="fas fa-calendar-alt"></i> Key Dates:</strong> Proposal due February 23, 2026 @ 11:59 PM | Project due March 8, 2026 @ 11:59 PM.
+            </div>
+            <div class="callout.success">
+                <strong><i class="fas fa-file-alt"></i> Link Submission Rule:</strong> Submit required URLs in one .txt file (CODD URL, GitHub URL, YouTube URL) via iCollege/Dropbox.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Pre-Grading Verification Checklist</h2>
+            <div class="checklist-item"><input type="checkbox"> <span>Project is HTML/CSS-only and runs correctly on the designated server</span></div>
+            <div class="checklist-item"><input type="checkbox"> <span>Selected topic track and extension pack are implemented as proposed</span></div>
+            <div class="checklist-item"><input type="checkbox"> <span>Undergraduate bonus selection (1) or graduate bonus selection (2) follows project rules</span></div>
+            <div class="checklist-item"><input type="checkbox"> <span>GitHub repository includes complete files and meaningful commits</span></div>
+            <div class="checklist-item"><input type="checkbox"> <span>YouTube walkthrough is 15–20 minutes and demonstrates code from VS Code</span></div>
+            <div class="checklist-item"><input type="checkbox"> <span>All required links are present in a .txt document</span></div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Technical Implementation (40 points)</h2>
+            <table class="criteria-table">
+                <thead>
+                    <tr>
+                        <th width="25%">Requirement</th>
+                        <th width="55%">Verification Criteria</th>
+                        <th width="20%">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semantic HTML Structure</td>
+                        <td>
+                            <div class="requirement-item">Proper use of landmarks (header, nav, main, section, footer)</div>
+                            <div class="requirement-item">Consistent heading hierarchy and readable content flow</div>
+                            <div class="requirement-item">Organized page structure across required screens/pages</div>
+                            <div class="penalty-item">-6 for poor semantic structure</div>
+                            <div class="penalty-item">-4 for broken or inconsistent page flow</div>
+                        </td>
+                        <td class="points-cell">/10</td>
+                    </tr>
+                    <tr>
+                        <td>CSS Layout & Responsiveness</td>
+                        <td>
+                            <div class="requirement-item">Effective use of Flexbox and Grid in real page layouts</div>
+                            <div class="requirement-item">Responsive behavior across mobile/tablet/desktop breakpoints</div>
+                            <div class="requirement-item">No major overlap, clipping, or unreadable sections</div>
+                            <div class="penalty-item">-6 for major responsive issues</div>
+                            <div class="penalty-item">-4 for weak layout implementation</div>
+                        </td>
+                        <td class="points-cell">/15</td>
+                    </tr>
+                    <tr>
+                        <td>Transforms, Transitions & Animations</td>
+                        <td>
+                            <div class="requirement-item">Meaningful use of transform/transition/animation techniques</div>
+                            <div class="requirement-item">Motion improves UX (feedback, hierarchy, guidance) not distraction</div>
+                            <div class="requirement-item">Clean keyframe organization and consistent timing choices</div>
+                            <div class="penalty-item">-5 for missing required motion techniques</div>
+                            <div class="penalty-item">-3 for excessive or disruptive motion</div>
+                        </td>
+                        <td class="points-cell">/15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Design Quality & Accessibility (20 points)</h2>
+            <table class="criteria-table">
+                <thead>
+                    <tr>
+                        <th width="25%">Requirement</th>
+                        <th width="55%">Verification Criteria</th>
+                        <th width="20%">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Visual Design System</td>
+                        <td>
+                            <div class="requirement-item">Consistent color palette and typography usage</div>
+                            <div class="requirement-item">Component consistency (cards, buttons, nav, spacing)</div>
+                            <div class="requirement-item">Professional polish suitable for first portfolio project</div>
+                            <div class="penalty-item">-4 for inconsistent design language</div>
+                        </td>
+                        <td class="points-cell">/10</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility & Usability</td>
+                        <td>
+                            <div class="requirement-item">Readable contrast and clear interactive states</div>
+                            <div class="requirement-item">Keyboard support cues and focus visibility</div>
+                            <div class="requirement-item">Reduced-motion consideration where applicable</div>
+                            <div class="penalty-item">-5 for accessibility gaps affecting readability/usability</div>
+                        </td>
+                        <td class="points-cell">/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Documentation, Process & Delivery (20 points)</h2>
+            <table class="criteria-table">
+                <thead>
+                    <tr>
+                        <th width="25%">Requirement</th>
+                        <th width="55%">Verification Criteria</th>
+                        <th width="20%">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Project Management Evidence</td>
+                        <td>
+                            <div class="requirement-item">Kanban usage and realistic timeline progress</div>
+                            <div class="requirement-item">Proposal alignment with implemented scope</div>
+                            <div class="requirement-item">Development notes/journal show problem-solving decisions</div>
+                        </td>
+                        <td class="points-cell">/8<br><span style="font-size: 0.75rem; font-weight: 500;">Live demo + design defense focus</span></td>
+                    </tr>
+                    <tr>
+                        <td>Repository & Submission Packaging</td>
+                        <td>
+                            <div class="requirement-item">Repository includes full code and meaningful commit history</div>
+                            <div class="requirement-item">README explains setup, structure, and implementation decisions</div>
+                            <div class="requirement-item">Required links delivered in one .txt file</div>
+                            <div class="penalty-item">-4 for missing/poor README</div>
+                            <div class="penalty-item">-5 for missing links .txt file</div>
+                        </td>
+                        <td class="points-cell">/12<br><span style="font-size: 0.75rem; font-weight: 500;">Code explanation + technical depth focus</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Presentation & Code Walkthrough (20 points)</h2>
+            <table class="criteria-table">
+                <thead>
+                    <tr>
+                        <th width="25%">Requirement</th>
+                        <th width="55%">Verification Criteria</th>
+                        <th width="20%">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demo Quality</td>
+                        <td>
+                            <div class="requirement-item">15–20 mins presentation with clear live walkthrough</div>
+                            <div class="requirement-item">Working demo of key pages and responsive behavior</div>
+                            <div class="requirement-item">Clear explanation of design decisions and trade-offs</div>
+                        </td>
+                        <td class="points-cell">/8</td>
+                    </tr>
+                    <tr>
+                        <td>Code Walkthrough Clarity</td>
+                        <td>
+                            <div class="requirement-item">Code explanation includes HTML/CSS files directly from VS Code</div>
+                            <div class="requirement-item">Integration files and folder relationships are explained clearly</div>
+                            <div class="requirement-item">Team can explain architecture, motion strategy, and accessibility choices</div>
+                            <div class="penalty-item">-6 for incomplete code/integration walkthrough</div>
+                            <div class="penalty-item">-5 for unclear delivery explanation</div>
+                        </td>
+                        <td class="points-cell">/12</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout strict strict-alert" id="strictNotice">
+                <div class="strict-alert-head">
+                    <strong><i class="fas fa-exclamation-circle"></i> Strictly Enforced:</strong>
+                    <span class="strict-alert-pill"><i class="fas fa-bell"></i> Read Carefully</span>
+                </div>
+                <p>Failure to provide a clear VS Code code walkthrough and integration file explanation will result in point deductions.</p>
+                <button type="button" class="strict-ack-btn" id="ackStrictNotice"><i class="fas fa-check-circle"></i> I Understand This Rule</button>
+            </div>
+
+            <div class="callout warning">
+                <strong><i class="fas fa-chart-line"></i> Grading Impact (within Presentation &amp; Code Walkthrough):</strong>
+                <ul style="margin-top: 0.6rem; padding-left: 1.1rem;">
+                    <li>Code explanation clarity and file integration walkthrough (35%)</li>
+                    <li>Architecture, motion strategy, and accessibility explanation quality (25%)</li>
+                    <li>Live demonstration success and responsive behavior coverage (25%)</li>
+                    <li>Design decision and trade-off defense (10%)</li>
+                    <li>Professional delivery and team participation (5%)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Bonus Category (Up to 15 points)</h2>
+            <table class="criteria-table">
+                <thead>
+                    <tr>
+                        <th width="25%">Category</th>
+                        <th width="55%">Measurable Criteria</th>
+                        <th width="20%">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Innovation</td>
+                        <td>
+                            <div class="requirement-item">Creative, original enhancements beyond baseline requirements</div>
+                            <div class="requirement-item">Feature integration improves UX meaningfully</div>
+                        </td>
+                        <td class="points-cell">/5</td>
+                    </tr>
+                    <tr>
+                        <td>Testing Evidence</td>
+                        <td>
+                            <div class="requirement-item">Clear test evidence for layout, accessibility, and responsive behavior</div>
+                            <div class="requirement-item">Iterative improvements documented from test findings</div>
+                        </td>
+                        <td class="points-cell">/5</td>
+                    </tr>
+                    <tr>
+                        <td>Code Quality Excellence</td>
+                        <td>
+                            <div class="requirement-item">Exceptionally clean, organized, reusable code patterns</div>
+                            <div class="requirement-item">Strong consistency across pages and components</div>
+                        </td>
+                        <td class="points-cell">/5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Score Calculation</h2>
+            <div class="totals">
+                <div class="total-row"><span>Technical Implementation</span><span>/40</span></div>
+                <div class="total-row"><span>Design Quality & Accessibility</span><span>/20</span></div>
+                <div class="total-row"><span>Documentation, Process & Delivery</span><span>/20</span></div>
+                <div class="total-row"><span>Presentation & Code Walkthrough</span><span>/20</span></div>
+                <div class="total-row"><span>Bonus</span><span>+ /15</span></div>
+                <div class="total-row final"><span>Final Score</span><span>/100 (+15 bonus max)</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><i class="fas fa-university"></i> CSC 4370/6370 Web Programming - Spring 2026</p>
+        <p>Project 1 grading rubric aligned to HTML/CSS scope, learning objectives, and delivery expectations.</p>
+    </footer>
+    <script>
+        (function () {
+            const strictNotice = document.getElementById('strictNotice');
+            const acknowledgeButton = document.getElementById('ackStrictNotice');
+
+            if (!strictNotice || !acknowledgeButton) {
+                return;
+            }
+
+            const storageKey = 'project1StrictNoticeAcknowledged';
+            const wasAcknowledged = localStorage.getItem(storageKey) === 'true';
+
+            if (!wasAcknowledged) {
+                strictNotice.classList.add('active', 'flash');
+
+                setTimeout(() => {
+                    strictNotice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 700);
+
+                setInterval(() => {
+                    strictNotice.classList.remove('flash');
+                    void strictNotice.offsetWidth;
+                    strictNotice.classList.add('flash');
+                }, 7000);
+            } else {
+                strictNotice.classList.add('acknowledged');
+                acknowledgeButton.textContent = 'Acknowledged';
+                acknowledgeButton.disabled = true;
+            }
+
+            acknowledgeButton.addEventListener('click', function () {
+                strictNotice.classList.remove('active', 'flash');
+                strictNotice.classList.add('acknowledged');
+                localStorage.setItem(storageKey, 'true');
+                acknowledgeButton.textContent = 'Acknowledged';
+                acknowledgeButton.disabled = true;
+            });
+        })();
+    </script>
+</body>
+</html>

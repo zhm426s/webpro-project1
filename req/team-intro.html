@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 | CSS & HTML | Team Introduction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site-icons.css">
+    <script defer src="site-icons.js"></script>
+    <style>
+        :root {
+            /* Late Winter / Early Spring Color Palette */
+            --primary: #5b8fa3;
+            --secondary: #7ba7c4;
+            --accent: #a8c5d9;
+            --warning: #d4a574;
+            --success: #8fb8a8;
+            --purple: #9b8aa5;
+            --dark: #2d3748;
+            --darker: #1a202c;
+            --light-bg: #f7fafc;
+            --text-light: #4a5568;
+            --text-lighter: #2d3748;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --code-bg: #edf2f7;
+            --highlight-border: #7ba7c4;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --radius-sm: 5px;
+            --radius-md: 8px;
+            --radius-lg: 10px;
+            --radius-xl: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f7fa 50%, #f5f9fc 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-md);
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--space-sm) 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--card-border);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-lighter);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .nav-logo i {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #7ba7c4 0%, #5b8fa3 50%, #6b8e9f 100%);
+            color: white;
+            padding: var(--space-xl) 0;
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="rgba(255,255,255,0.15)" d="M50 0 L60 35 L95 35 L65 55 L75 90 L50 70 L25 90 L35 55 L5 35 L40 35 Z"/></svg>');
+            background-size: 80px 80px;
+            opacity: 0.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-xs);
+            color: white;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            color: rgba(255,255,255,0.95);
+        }
+
+        /* Team Introduction Hero */
+        .intro-hero {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-lg);
+            border: 2px solid var(--accent);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="rgba(91,143,163,0.05)" d="M50 0 L60 35 L95 35 L65 55 L75 90 L50 70 L25 90 L35 55 L5 35 L40 35 Z"/></svg>');
+            background-size: 80px 80px;
+            opacity: 0.5;
+        }
+
+        .intro-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-title {
+            font-size: 2.2rem;
+            color: var(--text-lighter);
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-description {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto var(--space-md);
+        }
+
+        .folder-info {
+            background: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-top: var(--space-md);
+            border: 1px solid var(--card-border);
+            display: inline-block;
+        }
+
+        .folder-info i {
+            color: var(--success);
+            margin-right: var(--space-xs);
+        }
+
+        /* Leader Section */
+        .leader-section {
+            background: var(--card-bg);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            border: 2px solid var(--success);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .leader-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-md);
+            border-bottom: 2px solid var(--card-border);
+        }
+
+        .leader-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--success), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .leader-info h2 {
+            color: var(--text-lighter);
+            margin-bottom: var(--space-xs);
+        }
+
+        .leader-role {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .leader-responsibilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+
+        .responsibility-card {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            border: 1px solid var(--card-border);
+        }
+
+        .responsibility-card h4 {
+            color: var(--primary);
+            margin-bottom: var(--space-xs);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .responsibility-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .responsibility-card li {
+            padding: var(--space-xs) 0;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+        }
+
+        .responsibility-card li:last-child {
+            border-bottom: none;
+        }
+
+        .responsibility-card li i {
+            color: var(--success);
+            margin-top: 3px;
+        }
+
+        /* Team Members Grid */
+        .team-section {
+            margin-bottom: var(--space-lg);
+        }
+
+        .team-section h2 {
+            color: var(--text-lighter);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .team-member-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .member-avatar {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .member-basic h3 {
+            color: var(--text-lighter);
+            margin-bottom: 4px;
+            font-size: 1.3rem;
+        }
+
+        .member-role {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .member-details {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .member-details h4 {
+            color: var(--text-lighter);
+            margin-bottom: var(--space-sm);
+            font-size: 1rem;
+        }
+
+        .member-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .member-details li {
+            padding: var(--space-xs) 0;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            font-size: 0.95rem;
+        }
+
+        .member-details li:last-child {
+            border-bottom: none;
+        }
+
+        .member-details li i {
+            color: var(--secondary);
+            margin-top: 3px;
+        }
+
+        /* Time Tracking Section */
+        .time-tracking {
+            background: var(--card-bg);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            border: 2px solid var(--accent);
+        }
+
+        .time-tracking h2 {
+            color: var(--text-lighter);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .time-tracking-intro {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            border-left: 4px solid var(--info);
+        }
+
+        .time-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--space-md);
+        }
+
+        .time-table th {
+            background: var(--primary);
+            color: white;
+            padding: var(--space-sm);
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .time-table th:first-child {
+            border-radius: var(--radius-sm) 0 0 0;
+        }
+
+        .time-table th:last-child {
+            border-radius: 0 var(--radius-sm) 0 0;
+        }
+
+        .time-table td {
+            padding: var(--space-sm);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .time-table tr:nth-child(even) {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+        }
+
+        .time-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            color: var(--text-light);
+        }
+
+        .time-total {
+            background: var(--success);
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Daily Standup Section */
+        .standup-section {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            border: 2px solid var(--purple);
+        }
+
+        .standup-section h2 {
+            color: var(--text-lighter);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .standup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .standup-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            border: 1px solid var(--card-border);
+            text-align: center;
+        }
+
+        .standup-card i {
+            font-size: 2.5rem;
+            color: var(--purple);
+            margin-bottom: var(--space-sm);
+        }
+
+        .standup-card h4 {
+            color: var(--text-lighter);
+            margin-bottom: var(--space-xs);
+        }
+
+        /* Action Buttons */
+        .action-section {
+            text-align: center;
+            margin-top: var(--space-xl);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin: var(--space-xs);
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+        }
+
+        .btn-success {
+            background: var(--success);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: var(--space-xl);
+            padding: var(--space-lg);
+            color: var(--text-light);
+            border-top: 1px solid var(--card-border);
+            background: #f8fafc;
+        }
+
+        /* Editable Fields Notice */
+        .editable-notice {
+            background: #fef3c7;
+            border-left: 4px solid var(--warning);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .project-title {
+                font-size: 1.6rem;
+            }
+
+            .leader-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .member-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: var(--space-xs);
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .time-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-code"></i>
+                CSC 4370/6370
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Return to Project</a></li>
+                <li><a href="team-intro.html" class="active"><i class="fas fa-users"></i> Team Intro</a></li>
+                <li><a href="rubric.html"><i class="fas fa-circle-exclamation"></i> Grading Rubric</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-users"></i> Project 1 | CSS &amp; HTML</h1>
+            <p class="subtitle">Team Introduction & Project Overview</p>
+            <p class="subtitle">Meet the team behind the project</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Project Introduction Hero -->
+        <section class="intro-hero">
+            <div class="intro-hero-content">
+                <span class="project-badge">CSC 4370/6370 Project</span>
+                <h1 class="project-title">Murder Mystery</h1>
+                <p class="project-description">
+                    "An interactive, HTML/CSS only murder mystery game with two site themes, smooth transitions, and comprehensive storylines. "
+                </p>
+                <div class="folder-info">
+                    <i class="fas fa-folder-open"></i>
+                    <strong>Project Folder:</strong> [LeaderName_ProjectTitle] or [ProjectTitle]
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Members Section -->
+        <section class="team-section">
+            <h2><i class="fas fa-user-friends"></i> Team Members & Responsibilities</h2>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="member-basic">
+                            <h3>Z. Hilden-Minton</h3>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <h4><i class="fas fa-tasks"></i> Responsibilities</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Task 1: Put together HTML outline </li>
+                            <li><i class="fas fa-check"></i> Task 2: Basic sitewide CSS styling </li>
+                            <li><i class="fas fa-check"></i> Task 3: Case Board and Suspect page-specific styling</li>
+                            <li><i class="fas fa-check"></i> Task 4: Light/Dark mode switching</li>
+                        </ul>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">
+                        <i class="fas fa-clock"></i> Estimated Time: 30 hours
+                    </p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="member-basic">
+                            <h3>[Member 2 Full Name]</h3>
+                            <span class="member-role">[Role: e.g., CSS Animation Specialist]</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <h4><i class="fas fa-tasks"></i> Responsibilities</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> [Task 1: e.g., Create CSS keyframe animations]</li>
+                            <li><i class="fas fa-check"></i> [Task 2: e.g., Implement hover transitions]</li>
+                            <li><i class="fas fa-check"></i> [Task 3: e.g., Design loading states]</li>
+                            <li><i class="fas fa-check"></i> [Task 4: e.g., Optimize animation performance]</li>
+                        </ul>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">
+                        <i class="fas fa-clock"></i> Estimated Time: [X hours]
+                    </p>
+                </div>
+
+                <!-- Add more team member cards as needed -->
+            </div>
+        </section>
+
+        <!-- Time Tracking Section -->
+        <section class="time-tracking">
+            <h2><i class="fas fa-clock"></i> Member Time Tracking</h2>
+
+            <table class="time-table">
+                <thead>
+                    <tr>
+                        <th>Team Member</th>
+                        <th>Week 1 (Days 1-5)</th>
+                        <th>Week 2 (Days 6-10)</th>
+                        <th>Week 3 (Days 11-14)</th>
+                        <th>Final Days (15-17)</th>
+                        <th>Total Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Z.</strong></td>
+                        <td>6 hours</td>
+                        <td>6 hours</td>
+                        <td>8 hours</td>
+                        <td>10 hours</td>
+                        <td class="time-total">30</td>
+                    </tr>
+                    <tr>
+                        <td><strong>[Member 1]</strong></td>
+                        <td><input type="text" class="time-input" placeholder="e.g., 6 hours"></td>
+                        <td><input type="text" class="time-input" placeholder="e.g., 8 hours"></td>
+                        <td><input type="text" class="time-input" placeholder="e.g., 10 hours"></td>
+                        <td><input type="text" class="time-input" placeholder="e.g., 4 hours"></td>
+                        <td class="time-total">[Total]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Daily Standup Section -->
+        <section class="standup-section">
+            <h2><i class="fas fa-comments"></i> Daily Standup Meetings</h2>
+            
+            <div class="standup-grid">
+                <div class="standup-card">
+                    <i class="fas fa-calendar-day"></i>
+                    <h4>Meeting Schedule</h4>
+                    <p><strong>Frequency:</strong> Every 2-3 days<br>
+                    <strong>Duration:</strong> 10-15 minutes<br>
+                    <strong>Format:</strong> Over the phone</p>
+                </div>
+                <div class="standup-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>Three Key Questions</h4>
+                    <p>1. What did you complete yesterday?<br>
+                    2. What will you work on today?<br>
+                    3. Any blockers or impediments?</p>
+                </div>
+                <div class="standup-card">
+                    <i class="fas fa-file-export"></i>
+                    <h4>Meeting Output</h4>
+                    <p>Updated Kanban board<br>
+                    Documented decisions<br>
+                    Shared progress photos</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-university"></i> CSC 4370/6370 Web Programming - Spring 2026</p>
+            <p>Georgia State University | Department of Computer Science</p>
+            <p style="margin-top: var(--space-sm); opacity: 0.8;">
+                <i class="fas fa-envelope"></i> Contact your TAs or instructor for support.
+                <i class="fas fa-clock"></i> Office hours: Please see iCollege or message us on Discord.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Highlight current navigation item
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
