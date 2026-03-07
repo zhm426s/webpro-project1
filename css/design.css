@@ -300,15 +300,14 @@ footer {
     padding: 1em 2em;
     border: 2px solid var(--accent-1);
     border-radius: 10px;
-    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
-
+    height: 6em;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s, height 1s;
 }
 
 .hint-card > p {
     color: var(--background-color);
     opacity: 0;
-    height: 0;
-    transition: opacity 1s, height 1s, color 0.5s;
+    transition: opacity 1s, color 0.5s;
 }
 
 .hint-card > h3 {
@@ -345,7 +344,10 @@ footer {
 
 #hint-1-tog:checked ~ #hint-text-1, #hint-2-tog:checked ~ #hint-text-2, #hint-3-tog:checked ~ #hint-text-3, #hint-4-tog:checked ~ #hint-text-4{
     opacity: 1;
-    height: 100%;
+}
+
+#hint-1:has(#hint-1-tog:checked), #hint-2:has(#hint-2-tog:checked), #hint-3:has(#hint-3-tog:checked), #hint-4:has(#hint-4-tog:checked) {
+    height: 11em;
 }
 
 /* for Suspects page */
