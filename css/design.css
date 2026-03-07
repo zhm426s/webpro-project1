@@ -107,7 +107,6 @@ h2 {
 .button > p, .button > a {
     color: var(--background-color);
     font-size: 1em;
-    font-weight: bold;
     transition: font-size 1s, color 0.5s;
 }
 
@@ -117,6 +116,7 @@ h2 {
 
 a:link {
     color: var(--background-color);
+    font-weight: bold;
     transition: color 0.5s, width 0.5s, background-color 0.5s, outline-color 0.5s;
 }
 
@@ -312,7 +312,11 @@ footer {
     font-style: italic;
     margin-bottom: 0;
     text-shadow: 0 0 4px var(--accent-2);
-    transition: text-shadow 0.5s;
+    transition: text-shadow 0.5s, font-size 1s;
+}
+
+.hint-card > h3:hover {
+    font-size: 2em;
 }
 
 .hint-card > input[type="checkbox"] {
