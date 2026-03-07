@@ -104,7 +104,7 @@ h2 {
     transition: background-color 0.5s, border-color 0.5s;
 }
 
-.button > p, a {
+.button > p, .button > a {
     color: var(--background-color);
     font-size: 1em;
     font-weight: bold;
@@ -117,12 +117,11 @@ h2 {
 
 a:link {
     color: var(--background-color);
-    transition: color 0.5s;
+    transition: color 0.5s, width 0.5s, background-color 0.5s, outline-color 0.5s;
 }
 
 a:visited {
     color: var(--accent-1);
-    transition: color 0.5s;
 }
 
 a:focus {
@@ -130,7 +129,6 @@ a:focus {
     color: var(--accent-3);
     outline: 2px solid var(--focus-color);
     border-radius: 2px;
-    transition: background-color 0.5s, color 0.5s, outline-color 0.5s;
 }
 
 nav {
@@ -239,7 +237,6 @@ footer {
 
 .board-suspect, .board-evidence {
     display: block;
-    transition: width 1s;
 }
 
 .board-suspect {
