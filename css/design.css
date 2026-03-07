@@ -191,6 +191,36 @@ footer {
     width: 30em;
 }
 
+/* for Case File page */
+
+#file {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#file-vic-img {
+    width: 12em;
+    margin: 2em;
+}
+
+#file-victim {
+    width: 100%;
+    border: 2px solid var(--accent-2);
+}
+
+#file-text {
+    width: 23em;
+}
+
+.file-link {
+    color: var(--accent-3);
+}
+
+.file-link:visited {
+    color: var(--accent-2);
+}
+
 /* for Case Board Page */
 
 #case-board {
