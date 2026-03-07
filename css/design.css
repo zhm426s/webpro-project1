@@ -380,7 +380,7 @@ footer {
 
 .hint-card > input[type="checkbox"]:checked {
     background: var(--accent-1);
-    transition: background-color;
+    transition: background-color 0.5s;
 }
 
 #hint-1-tog:checked ~ #hint-text-1, #hint-2-tog:checked ~ #hint-text-2, #hint-3-tog:checked ~ #hint-text-3, #hint-4-tog:checked ~ #hint-text-4{
@@ -389,6 +389,7 @@ footer {
 
 #hint-1:has(#hint-1-tog:checked), #hint-2:has(#hint-2-tog:checked), #hint-3:has(#hint-3-tog:checked), #hint-4:has(#hint-4-tog:checked) {
     height: 11em;
+    background: var(--accent-2);
 }
 
 /* for Suspects page */
