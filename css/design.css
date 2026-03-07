@@ -12,10 +12,10 @@
     /* Dark theme colors */
     --background-color: #000000;
     --accent-1: #252D36;
-    --accent-2: #661719;
+    --accent-2: #c6474d;
     --accent-3: #eed6d7;
     --text-color: #FFFFFA;
-    --focus-color: #da313a;
+    --focus-color: #661719;
 }
 
 html {
