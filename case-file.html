@@ -1,57 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>The Whitmore Gallery Case</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/design.css">
 </head>
 
 <body>
 
 <header>
-    <h1>The Whitmore Gallery Case</h1>
+    <label for="theme-tog">
+        <div class="button" id="theme-switch">
+            <input type="checkbox" id="theme-tog">
+            <p>Switch Theme</p>
+        </div>
+    </label>
+
+    <h1>Case File</h1>
+
+    <div class="spacer"></div>
 </header>
 
-<section>
+<nav>
+    <div class="nav-button this-screen">
+        <p>Case File</p>
+    </div>
 
-<h2>Victim</h2>
+    <div class="nav-button">
+        <p><a href="case-board.html">Case Board</a></p>
+    </div>
 
-<p><strong>Name:</strong> Eleanor Whitmore</p>
-<p><strong>Age:</strong> 29</p>
-<p><strong>Date of Death:</strong> March 14, 2023</p>
-<p><strong>Time of Death:</strong> Approximately 9:17 PM</p>
-<p><strong>Location:</strong> Private office at Whitmore Gallery</p>
+    <div class="nav-button">
+        <p><a href="suspects.html">Suspects</a></p>
+    </div>
 
-<h3>Background</h3>
+    <div class="nav-button">
+        <p><a href="evidence.html">Evidence</a></p>
+    </div>
+</nav>
 
-<p>
-Eleanor Whitmore was the founder and sole owner of Whitmore Gallery.
-She had built a strong reputation for ambitious exhibitions and aggressive
-business expansion. Recently she announced plans to open a second location.
-Despite the gallerys' public success, financial documents suggested
-the business was under hidden financial stress.
+<main>
+
+<h2>The Murder of Eleanor Whitmore</h2>
+
+<div id="file">
+
+<div id="file-text">
+
+<p><b>The Basics:</b><br>
+Eleanor Whitmore was murdered around <b>9:17 PM on March 14, 2023</b> inside her private office at Whitmore Gallery during the gallery's anniversary event.
+Her body was discovered at approximately <b>9:26 PM</b>. 
+The cause of death was determined to be <b>blunt force trauma to the back of the head</b>.
 </p>
 
-<h3>Circumstances of Death</h3>
+<p>
+Security cameras were disabled between <b>9:05 PM and 9:58 PM</b>, leaving a critical window where the crime occurred without recorded footage.
+A shattered wine glass was found near her body and the office door was locked from the inside.
+</p>
 
-<ul>
-<li>Eleanor was found dead in her locked office during the gallery anniversary event.</li>
-<li>Security cameras were disabled between 9:05 PM and 9:58 PM.</li>
-<li>Cause of death: blunt force trauma to the back of the head.</li>
-<li>A shattered wine glass was discovered near the body.</li>
-<li>A text message sent at 8:52 PM read: “Meet me in the office. We need to settle this tonight.”</li>
-</ul>
+<p>
+Shortly before her death, Eleanor sent a message reading:
+<br><b>“Meet me in the office. We need to settle this tonight.”</b>
+</p>
 
-</section>
+<p><b>About the Victim:</b><br>
+Eleanor Whitmore was the founder and sole owner of Whitmore Gallery.
+She had built a reputation for ambitious exhibitions and aggressive business expansion.
+She recently announced plans to open a second gallery location later that year.
+</p>
 
-<nav>
+<p>
+Despite the gallery's public success, internal financial records suggest she was under significant financial stress.
+Her relationships with investors, artists, and employees had recently become strained.
+</p>
 
-<a href="../suspects/whitmore-suspects.html">View Suspects</a>
+<p>
+There are <b>four potential suspects</b> connected to Eleanor who all had possible motives and access during the event.
+</p>
 
-<br><br>
+<p><b>
+Explore the <a class="file-link" href="case-board.html">Case Board</a> or review the 
+<a class="file-link" href="evidence.html">Evidence</a> to gather clues.
+When you're ready, head to the <a class="file-link" href="suspects.html">Suspects</a> page to determine who killed Eleanor Whitmore.
+</b></p>
 
-<a href="../evidence/whitmore-evidence.html">View Evidence</a>
+</div>
 
-</nav>
+</div>
+
+</main>
+
+<footer>
+
+<div class="button">
+<p><a href="index.html">Exit to Home</a></p>
+</div>
+
+</footer>
 
 </body>
 </html>
