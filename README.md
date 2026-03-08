@@ -34,7 +34,7 @@ In the future, we would like to add a Timer element to the site, which would kee
 
 Along with this we would also like to add a stats page, where users can keep track of their solved cases, their times, etc. This would likely require many more than two cases being included.
 
-## Contributing [this can be deleted if wanted]
+## Contributing
 
 We are open to contributions, especially involving adding more cases to the game. Here is how to do add your own case: 
 
@@ -49,3 +49,5 @@ We are open to contributions, especially involving adding more cases to the game
 The primary programmers on this project are Github users @zhm426s and @azgai. 
 
 Case 1: "The Murder of Isaac Harlow", written by @zhm426s. Victim, suspect, and other portraits used in this mystery photographed by the following Pixabay.com users: [Ксения198](https://pixabay.com/users/%d0%ba%d1%81%d0%b5%d0%bd%d0%b8%d1%8f198-15764079/), [OrnaW](https://pixabay.com/users/ornaw-8155178/), [vicente_leoni](https://pixabay.com/users/vicente_leoni-16922592/), [Zachtleven](https://pixabay.com/users/zachtleven-9577367/), [Prosident004](https://pixabay.com/users/prosident004-14318731/). Text messages created using Postfully.app. 
+
+Case 2: "The Whitmore Gallery Case", written by @azgai. 
