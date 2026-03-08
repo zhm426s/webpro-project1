@@ -33,7 +33,8 @@ body {
     transition: background-color 0.5s;
 }
 
-header, footer {
+header,
+footer {
     background: var(--accent-1);
     border-style: solid;
     border-color: var(--accent-3);
@@ -49,7 +50,9 @@ header {
     border-width: 0 0 4px 0;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
     color: var(--text-color);
     transition: color 0.5s;
 }
@@ -108,14 +111,15 @@ h2 {
     transition: background-color 0.5s, border-color 0.5s;
 }
 
-.button > p, .button > a {
+.button>p,
+.button>a {
     color: var(--background-color);
     font-size: 1em;
     font-weight: bold;
     transition: font-size 1s, color 0.5s;
 }
 
-.button > p:hover {
+.button>p:hover {
     font-size: 1.1em;
 }
 
@@ -158,14 +162,15 @@ nav {
     transition: background-color 0.5s;
 }
 
-.nav-button > p {
+.nav-button>p {
     font-size: 0.9em;
     transition: font-size 1s;
 }
 
-.nav-button > p:hover {
+.nav-button>p:hover {
     font-size: 0.95em;
 }
+
 .this-screen {
     background: var(--background-color);
     font-weight: bold;
@@ -247,7 +252,8 @@ footer {
     width: 16em;
 }
 
-#ev-grid, #sus-grid {
+#ev-grid,
+#sus-grid {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -260,23 +266,27 @@ footer {
     transition: background-color 0.5s;
 }
 
-.board-sus-image, .board-ev-image {
+.board-sus-image,
+.board-ev-image {
     width: 95%;
     border: 2px solid var(--background-color);
     transition: box-shadow 1s, background-color 0.5s;
 }
 
-.board-sus-image:hover, .board-ev-image:hover {
+.board-sus-image:hover,
+.board-ev-image:hover {
     box-shadow: 0 0 10px var(--accent-3);
 }
 
-.board-suspect:focus, .board-evidence:focus {
+.board-suspect:focus,
+.board-evidence:focus {
     outline: 4px solid var(--focus-color);
     border-radius: 4px;
     transition: outline-color 0.5s;
 }
 
-.board-suspect, .board-evidence {
+.board-suspect,
+.board-evidence {
     display: block;
 }
 
@@ -342,13 +352,13 @@ footer {
     transition: background-color 0.5s, color 0.5s, border-color 0.5s, height 1s;
 }
 
-.hint-card > p {
+.hint-card>p {
     color: var(--background-color);
     opacity: 0;
     transition: opacity 1s, color 0.5s;
 }
 
-.hint-card > h3 {
+.hint-card>h3 {
     font-size: 1.75em;
     font-style: italic;
     margin-bottom: 0;
@@ -356,11 +366,11 @@ footer {
     transition: text-shadow 0.5s, font-size 1s;
 }
 
-.hint-card > h3:hover {
+.hint-card>h3:hover {
     font-size: 2em;
 }
 
-.hint-card > input[type="checkbox"] {
+.hint-card>input[type="checkbox"] {
     position: absolute;
     top: 15%;
     left: 10%;
@@ -374,21 +384,27 @@ footer {
     transition: background-color 0.5s;
 }
 
-.hint-card > input[type="checkbox"]:focus {
+.hint-card>input[type="checkbox"]:focus {
     outline: 3px solid var(--focus-color);
     transition: outline-color 0.5s;
 }
 
-.hint-card > input[type="checkbox"]:checked {
+.hint-card>input[type="checkbox"]:checked {
     background: var(--accent-1);
     transition: background-color 0.5s;
 }
 
-#hint-1-tog:checked ~ #hint-text-1, #hint-2-tog:checked ~ #hint-text-2, #hint-3-tog:checked ~ #hint-text-3, #hint-4-tog:checked ~ #hint-text-4{
+#hint-1-tog:checked~#hint-text-1,
+#hint-2-tog:checked~#hint-text-2,
+#hint-3-tog:checked~#hint-text-3,
+#hint-4-tog:checked~#hint-text-4 {
     opacity: 1;
 }
 
-#hint-1:has(#hint-1-tog:checked), #hint-2:has(#hint-2-tog:checked), #hint-3:has(#hint-3-tog:checked), #hint-4:has(#hint-4-tog:checked) {
+#hint-1:has(#hint-1-tog:checked),
+#hint-2:has(#hint-2-tog:checked),
+#hint-3:has(#hint-3-tog:checked),
+#hint-4:has(#hint-4-tog:checked) {
     height: 11em;
     background: var(--accent-2);
 }
@@ -429,22 +445,45 @@ footer {
     transition: background-color 0.5s, border-color 0.5s;
 }
 
-.arrest-button > p {
+.arrest-button>p {
     font-size: 1;
     transition: font-size 2s;
 }
 
-.arrest-button > p:hover {
+.arrest-button>p:hover {
     font-size: 1.2em;
 }
 
 @keyframes shakeText {
-    0% {top: 0; left: 0;}
-    20% {top: 0.5px; left: -0.5px;}
-    40% {top: 0; left: 1px;}
-    60% {top: 0.5px; left: 0;}
-    80% {top: -0.5px; left: -0.5px;}
-    100% {top: -0.5px; left: 0px;}
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    20% {
+        top: 0.5px;
+        left: -0.5px;
+    }
+
+    40% {
+        top: 0;
+        left: 1px;
+    }
+
+    60% {
+        top: 0.5px;
+        left: 0;
+    }
+
+    80% {
+        top: -0.5px;
+        left: -0.5px;
+    }
+
+    100% {
+        top: -0.5px;
+        left: 0px;
+    }
 }
 
 .arr-link {
@@ -533,4 +572,95 @@ footer {
 
 #script-tog-6:checked ~ .script-text-6, #script-tog-7:checked ~ .script-text-7, #script-tog-8:checked ~ .script-text-8, #script-tog-14:checked ~ .script-text-14 {
     height: 79em;
+}
+
+/*Animations added */
+
+
+body {
+    animation: pageFade 1s ease-in;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+header h1 {
+    animation: titleDrop 1.2s ease-out;
+}
+
+@keyframes titleDrop {
+
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+
+.button {
+    transition: background-color 0.5s, border-color 0.5s, transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+
+#enter {
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+
+main h2,
+main p {
+    animation: textFade 1.5s ease-in;
+}
+
+@keyframes textFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
