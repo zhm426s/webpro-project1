@@ -1,0 +1,31 @@
+/* ── Site Icons — SVG icon base styles ──────────────────────────────
+ * Provides consistent sizing, alignment, and color inheritance
+ * for inline SVG icons that replace Font Awesome.
+ * ─────────────────────────────────────────────────────────────────── */
+
+/* Base container — the <i> tag wrapping each SVG */
+i.fas,
+i.far,
+i.fab,
+i[class*="fa-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  line-height: 1;
+  vertical-align: -0.125em;
+}
+
+/* The inline SVG inside each <i> */
+.site-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Ensure filled sub-elements render correctly */
+.site-icon [fill="currentColor"] {
+  stroke: none;
+}
