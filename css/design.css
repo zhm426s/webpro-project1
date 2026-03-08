@@ -128,11 +128,11 @@ a:link {
     transition: color 0.5s, width 0.5s, background-color 0.5s, outline-color 0.5s;
 }
 
-.button > a:link, .hint-card > a:link, .nav-button > a:link, .arrest-button > a:link {
+.button-link, .hint-card > p > a:link, .nav-link, .arrest-button > a:link {
     color: var(--background-color);
 }
 
-.button > a:visited, .hint-card > a:visited, .nav-button > a:visited, .arrest-button > a:visited {
+.button-link:visited, .hint-card > p > a:visited, .nav-link:visited, .arrest-button > a:visited {
     color: var(--accent-1);
 }
 
