@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Murder Mystery- Evidence</title> <!--replace with title of mystery-->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/design.css">
+    </head>
+    <body>
+        <header>
+            <div class="button" id="theme-switch">
+                <p>Switch Theme</p>
+            </div>
+            <h1>Evidence</h1>
+        </header>
+        <nav> <!--this can be copied to case-file, suspects, and evidence, just change which button uses "this-screen"-->
+            <div class="nav-button">
+                <p><a href="case-file.html">Case File</a></p>
+            </div>
+            <div class="nav-button"> 
+                <p><a href="case-board.html">Case Board</a></p>
+            </div>
+            <div class="nav-button">
+                <p><a href="suspects.html">Suspects</a></p>
+            </div>
+            <div class="nav-button this-screen"> <!--placeholder button which would link to evidence screen on other pages-->
+                <p>Evidence</p>
+            </div>
+        </nav>
+        <main>
+            <div class="evidence-card" id="weapon"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>Weapon: Danny Garner's Baseball Bat</h2>
+                <img class="evidence-image" src="images/evidence/bat.png" alt="bloody baseball bat">
+                <p>This bat belonged to Danny during his little league days. It was found in the trash room in the roommates' apartment.
+                    It has the blood of Issac Harlow on it, as well as recent fingerprints matching Danny Garner and Nate Ribeiro. 
+                </p>
+            </div>
+            <div class="evidence-card" id="evidence1"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>1: Medical Examiner's Report</h2>
+                <img class="evidence-image" src="images/evidence/MEreport1.png" alt="Medical Examiner's report">
+                <p>Medical Examiner Chuck Rivers evaluated Isaac's body. He found that Isaac was killed by two blows to the head, and his system
+                    contained a chemical called Strychnine (Commonly found in rat and rodent poisons). 
+                </p>
+                <label for="script-tog-1"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-1">
+                    <input type="checkbox" id="script-tog-1" class="script-toggle">
+                    <p class="script-text script-text-1">[insert transcript here]</p>
+                    <label for="script-tog-1" class="script-text script-text-1"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence2"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>2: Texts between Isaac and Katy</h2>
+                <img class="evidence-image" src="images/evidence/IsaacKatyTexts.png" alt="iMessage texts between Isaac and Katy">
+                <p>Found on Isaac's phone.
+                </p>
+                <label for="script-tog-2"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-2">
+                    <input type="checkbox" id="script-tog-2" class="script-toggle">
+                    <p class="script-text script-text-2">[insert transcript here]</p>
+                    <label for="script-tog-2" class="script-text script-text-2"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence3"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>3: Texts between Isaac and Nate</h2>
+                <img class="evidence-image" src="images/evidence/IsaacNateTexts.png" alt="iMessage texts between Isaac and Nate">
+                <p>Found on Isaac's phone. 
+                </p>
+                <label for="script-tog-3"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-3">
+                    <input type="checkbox" id="script-tog-3" class="script-toggle">
+                    <p class="script-text script-text-3">[insert transcript here]</p>
+                    <label for="script-tog-3" class="script-text script-text-3"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence4"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>4: Texts between Isaac and Danny</h2>
+                <img class="evidence-image" src="images/evidence/IsaacDannyTexts.png" alt="iMessage texts between Isaac and Nate">
+                <p>Found on Isaac's phone.
+                </p>
+                <label for="script-tog-4"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-4">
+                    <input type="checkbox" id="script-tog-4" class="script-toggle">
+                    <p class="script-text script-text-4">[insert transcript here]</p>
+                    <label for="script-tog-4" class="script-text script-text-4"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence5"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>5: Texts between Isaac and Sharon</h2>
+                <img class="evidence-image" src="images/evidence/IsaacSharonTexts.png" alt="iMessage texts between Isaac and his mother">
+                <p>Found on Isaac's phone.
+                </p>
+                <label for="script-tog-5"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-5">
+                    <input type="checkbox" id="script-tog-5" class="script-toggle">
+                    <p class="script-text script-text-5">[insert transcript here]</p>
+                    <label for="script-tog-5" class="script-text script-text-5"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence6"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>6: Katy's Statement</h2>
+                <img class="evidence-image" src="images/evidence/KatyStatement.png" alt="Katy's Statement">
+                <p>Official Interview of Katy Tang conducted by Detective Alexa Way.
+                </p>
+                <label for="script-tog-6"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-6">
+                    <input type="checkbox" id="script-tog-6" class="script-toggle">
+                    <p class="script-text script-text-6">Official Interview of: Katheryn Tang <br>Interviewer: Det. Alexa Way, LVPD<br>Case Number: 0096-284<br>Date: 08/21/2022<br><br>
+                    Way: What were you doing on the night of the murder?<br>Tang: I was at home, watching a movie.<br>Way: Were you with anyone?<br>Tang: No.<br>Way: So, you were alone, with no one to confirm your whereabouts?<br>
+                    Tang: Yes.<br>Way: What was the nature of your relationship with the deceased?<br>Tang: We were dating, for about 2 and a half years.<br>Way: And how did you feel about him?<br>
+                    Tang: Conflicted. Early on, he was amazing. He would shower me in compliments, fun experiences, everything. But about 8 months ago, he started to act differently. Like he was tired of me. I tried to keep the relationship afloat, but, he was growing more and more distant, especially outside of events like Valentines or my birthday.<br>
+                    Way: Were you aware that he was seeing another woman?<br>Tang: I was.<br>Way: And how did you react to that?<br>Tang: I was angry. Very angry. But also not surprised. I had suspected something was up.<br>
+                    Way: When was the last time you saw the deceased?<br>Tang: Thursday morning [The 18th].<br>Way: And what happened?<br>Tang: We yelled at each other. He called me… a lot of things. Like that I was entitled, and had a bad temper, and that I was jealous. And worse. I told him he was in the wrong, for all of it.<br>
+                    Way: Did you consider retaliating violently against him?<br>Tang: No, I would never. I hate… hated him. But I wouldn’t hurt him, I especially wouldn’t kill him.<br>Way: Do you know who would?<br>
+                    Tang: I know Rosie never liked him, but I can’t imagine she would hurt him, not this seriously.<br>Way: Anyone else?<br>Tang: No, I can’t think of anyone.<br>Way: What do you know about Isaac’s roommates, Daniel Garner and Natanael Ribeiro?<br>
+                    Tang: I know next to nothing about Danny. I’ve talked to him, yes, but he doesn’t spend much time with Isaac and he never had much reason to socialize with me and not Isaac. He seems to spend a lot of time alone. Nate is very nice, he’s funny and treats me well. He and Isaac’s other friend, Joshua, are very close.<br>
+                    Way: Do you know Isaac’s mother, Sharon Harlow?<br>Tang: Yeah, I’ve met her a few times.<br>Way: What was the dynamic between her and her son?<br>Tang: Oh, he was very hostile to her. He made her out to be a tyrant, kind of, but the times I’ve talked to her she was perfectly nice.<br>
+                    Way: Did you get the sense that she had a bad temper?<br>Tang: No, not at all.<br>Way: Would you be comfortable submitting your phone as evidence? It will be given back after we retrieve any relevant information.<br>
+                    Tang: Oh… yeah, I guess. I have nothing to hide.<br>Way: Okay, thank you for your time, Miss Tang.<br>Tang: No problem.</p>
+                    <label for="script-tog-6" class="script-text script-text-6"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence7"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>7: Nate's Statement</h2>
+                <img class="evidence-image" src="images/evidence/NateStatement.png" alt="Nate's Statement">
+                <p>Official Interview of Nate Ribeiro conducted by Detective Alexa Way.
+                </p>
+                <label for="script-tog-7"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-7">
+                    <input type="checkbox" id="script-tog-7" class="script-toggle">
+                    <p class="script-text script-text-7">Official Interview of: Natanael Ribeiro<br>Interviewer: Det. Alexa Way, LVPD<br>Case Number: 0096-284<br>Date: 08/20/2022<br><br>
+                    Way: Where were you last night?<br>Ribeiro: I know it’s not a good story, but I promise you, I was in my room playing Call of Duty. I usually wear a headset and the sounds can be loud and so that’s why I guess I must’ve missed any screaming or noises? I swear, I can’t prove it but-<br>
+                    Way: Thank you, Mr. Ribeiro. What was your relationship with the deceased?<br>Ribeiro: He was my friend, we met through our other friend Joshua a couple years back and when Isaac was looking for a place to stay after the lockdowns ended, I had just moved in with Danny. We had a spare room so I suggested he move in too.<br>
+                    Way: And what was he like as a friend and roommate?<br>Ribeiro: He… he was very funny, we played a lot of games together, and we support some of the same, like, soccer teams and stuff. But he was all jokes. Nothing was ever serious with him. He was never sensitive or supportive in anything. Even Joshua, who’s also sort of like that, I could still go to him if I needed something. As a roommate, he clashed with Danny a lot, mostly on doing chores and things, which, to be honest, Danny deserved. But Isaac liked to retaliate against him, usually by being annoying or pulling little pranks against him, and he would always get me to join him for those. <br>
+                    Way: So it seems like you didn’t like Isaac very much.<br>Ribeiro: Don’t get me wrong, when it was a fun time, he was fun. It’s just when someone was angry, or sad, or hurt, he would disappear. Even with his girlfriend.<br>Way: What do you know about his relationship with his girlfriend?<br>Ribeiro: I thought they were going fine, until Katy came over a couple days ago talking about how he cheated and was trying to play it off as nothing. They were yelling at each other a lot.<br>
+                    Way: What’s your opinion of Katy?<br>Ribeiro: She’s… well, I guess since he’s dead, I’ll just say it. I’ve liked her for years. We went to the same college, and I remember seeing her around. I don’t think Isaac was good enough for her.<br>Way: Were you envious of Isaac?<br>Ribeiro: Yeah, in a way. But I wasn’t going to try to break them up.<br>
+                    Way: Walk me through when you found Isaac’s body.<br>Ribeiro: He… I had gone to the kitchen to get a snack, and I noticed that his bedroom door was open. He always closes it if he’s in there, so I was confused. I went in to see if he was sleeping, and I saw some blood on the floor by his closet. I opened it up and, well, he was laying there…<br>
+                    Way: That must have upset you.<br>Ribeiro: It did. I haven’t slept, obviously. And I don’t think I will.<br>Way: Thank you for coming, Mr. Ribeiro. Would you be okay submitting your phone for evidence? It will be given back when we’ve collected anything relevant.<br>Ribeiro: Oh… um, okay.<br>Way: Thank you.</p>
+                    <label for="script-tog-7" class="script-text script-text-7"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence8"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>8: Danny's Statement</h2>
+                <img class="evidence-image" src="images/evidence/DannyStatement.png" alt="Danny's Statement">
+                <p>Official Interview of Danny Garner conducted by Detective Ross Deacon.
+                </p>
+                <label for="script-tog-8"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-8">
+                    <input type="checkbox" id="script-tog-8" class="script-toggle">
+                    <p class="script-text script-text-8">[insert transcript here]</p>
+                    <label for="script-tog-8" class="script-text script-text-8"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence9"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>9: Sharon's Statement</h2>
+                <img class="evidence-image" src="images/evidence/SharonStatement.png" alt="Sharon's Statement">
+                <p>Official Interview of Sharon Harlow conducted by Detective Ross Deacon.
+                </p>
+                <label for="script-tog-9"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-9">
+                    <input type="checkbox" id="script-tog-9" class="script-toggle">
+                    <p class="script-text script-text-9">[insert transcript here]</p>
+                    <label for="script-tog-9" class="script-text script-text-9"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence10"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>10: Katy's Friend Rosie's Statement</h2>
+                <img class="evidence-image" src="images/evidence/RosieStatement.png" alt="Rosie's Statement">
+                <p>Official Interview of Rosie Vu conducted by Detective Ross Deacon.
+                </p>
+                <label for="script-tog-10"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-10">
+                    <input type="checkbox" id="script-tog-10" class="script-toggle">
+                    <p class="script-text script-text-10">[insert transcript here]</p>
+                    <label for="script-tog-10" class="script-text script-text-10"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence11"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>11: Danny's Father Jacob's Statement</h2>
+                <img class="evidence-image" src="images/evidence/JacobStatement.png" alt="Jacob's Statement">
+                <p>Official Interview of Jacob Garner conducted by Detective Ross Deacon.
+                </p>
+                <label for="script-tog-11"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-11">
+                    <input type="checkbox" id="script-tog-11" class="script-toggle">
+                    <p class="script-text script-text-11">[insert transcript here]</p>
+                    <label for="script-tog-11" class="script-text script-text-11"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence12"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>12: Isaac's Fling Grace's Statement</h2>
+                <img class="evidence-image" src="images/evidence/GraceStatement.png" alt="Grace's Statement">
+                <p>Official Interview of Grace Beckham conducted by Detective Ross Deacon.
+                </p>
+                <label for="script-tog-12"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-12">
+                    <input type="checkbox" id="script-tog-12" class="script-toggle">
+                    <p class="script-text script-text-12">[insert transcript here]</p>
+                    <label for="script-tog-12" class="script-text script-text-12"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence13"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>13: Isaac and Nate's Friend Joshua's Statement</h2>
+                <img class="evidence-image" src="images/evidence/JoshuaStatement.png" alt="Joshua's Statement">
+                <p>Official Interview of Joshua Clarke conducted by Detective Alexa Way.
+                </p>
+                <label for="script-tog-13"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-13">
+                    <input type="checkbox" id="script-tog-13" class="script-toggle">
+                    <p class="script-text script-text-13">[insert transcript here]</p>
+                    <label for="script-tog-13" class="script-text script-text-13"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence14"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>14: Texts between Katy and her Friend Rosie</h2>
+                <img class="evidence-image" src="images/evidence/KatyRosieTexts.png" alt="iMessage texts between Katy and Rosie">
+                <p>Found on Katy's phone, which was volunteered to the police. 
+                </p>
+                <label for="script-tog-14"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-14">
+                    <input type="checkbox" id="script-tog-14" class="script-toggle">
+                    <p class="script-text script-text-14">[insert transcript here]</p>
+                    <label for="script-tog-14" class="script-text script-text-14"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence15"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>15: Texts between Nate and he and Isaac's Friend Joshua</h2>
+                <img class="evidence-image" src="images/evidence/NateJoshuaTexts.png" alt="iMessage texts between Nate and Joshua">
+                <p>Found on Nate's phone, which was volunteered to the police. 
+                </p>
+                <label for="script-tog-15"><p><b>View Transcript</b></p></label>
+                <div class="transcript" id="script-15">
+                    <input type="checkbox" id="script-tog-15" class="script-toggle">
+                    <p class="script-text script-text-15">[insert transcript here]</p>
+                    <label for="script-tog-15" class="script-text script-text-15"><p><b>Hide Transcript</b></p></label>
+                </div>
+            </div>
+            <div class="evidence-card" id="evidence16"> <!--copy and replace * with number of evidence piece, for all pieces of evidence-->
+                <h2>16: Strychnine Rodenticide</h2>
+                <img class="evidence-image" src="images/evidence/strychnine.jpg" alt="a bottle of gopher bait/killer containing strychnine">
+                <p>A bottle of gopher bait/killer found in the roommates' kitchen. It has recent fingerprints on it belonging to
+                    Sharon Harlow, Isaac Harlow, and Danny Garner.  
+                </p>
+            </div>
+        </main>
+        <footer> <!--this can be copied for case-file, case-board, and suspects-->
+            <div class="button">
+                <p><a href="index.html">Exit to Home</a></p>
+            </div>
+        </footer>
+
+    </body>
+</html>

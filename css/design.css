@@ -186,6 +186,11 @@ footer {
     border-width: 4px 0 0 0;
 }
 
+#disclaimer {
+    text-align: center;
+    width: 30em;
+}
+
 /* for Case File page */
 
 #file {
@@ -202,6 +207,7 @@ footer {
 #file-victim {
     width: 100%;
     border: 2px solid var(--accent-2);
+    transition: border-color 0.5s;
 }
 
 #file-text {
@@ -375,7 +381,7 @@ footer {
 
 .hint-card > input[type="checkbox"]:checked {
     background: var(--accent-1);
-    transition: background-color;
+    transition: background-color 0.5s;
 }
 
 #hint-1-tog:checked ~ #hint-text-1, #hint-2-tog:checked ~ #hint-text-2, #hint-3-tog:checked ~ #hint-text-3, #hint-4-tog:checked ~ #hint-text-4{
@@ -384,6 +390,7 @@ footer {
 
 #hint-1:has(#hint-1-tog:checked), #hint-2:has(#hint-2-tog:checked), #hint-3:has(#hint-3-tog:checked), #hint-4:has(#hint-4-tog:checked) {
     height: 11em;
+    background: var(--accent-2);
 }
 
 /* for Suspects page */
@@ -452,4 +459,63 @@ footer {
     animation-duration: 0.25s;
     animation-delay: 0.25s;
     animation-iteration-count: infinite;
+} 
+
+/* for Evidence page */
+
+.evidence-image {
+    width: 100%;
+    border: 2px solid var(--accent-2);
+    transition: border-color 0.5s;
+}
+
+.evidence-card {
+    align-items: center;
+}
+
+.evidence-card > p, .evidence-card > .transcript {
+    margin: 0.5em 5em;
+}
+
+.script-toggle {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    appearance: none;
+    background: var(--background-color);
+    border-radius: 20px;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    opacity: 1;
+    transition: background-color 0.5s;
+}
+
+.script-toggle:focus {
+    outline: 3px solid var(--focus-color);
+    transition: outline-color 0.5s;
+}
+
+.script-toggle:checked {
+    background: var(--text-color);
+    transition: background-color 0.5s;
+}
+
+.transcript {
+    position: relative;
+    height: 0;
+    transition: height 1s;
+}
+
+.script-text {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#script-1:has(#script-tog-1:checked), #script-2:has(#script-tog-2:checked), #script-3:has(#script-tog-3:checked), #script-4:has(#script-tog-4:checked), #script-5:has(#script-tog-5:checked), #script-6:has(#script-tog-6:checked), #script-7:has(#script-tog-7:checked), #script-8:has(#script-tog-8:checked), #script-9:has(#script-tog-9:checked), #script-10:has(#script-tog-10:checked), #script-11:has(#script-tog-11:checked), #script-12:has(#script-tog-12:checked), #script-13:has(#script-tog-13:checked), #script-14:has(#script-tog-14:checked), #script-15:has(#script-tog-15:checked) {
+    height: 100em;
+}
+
+#script-tog-1:checked ~ .script-text-1, #script-tog-2:checked ~ .script-text-2, #script-tog-3:checked ~ .script-text-3, #script-tog-4:checked ~ .script-text-4, #script-tog-5:checked ~ .script-text-5, #script-tog-6:checked ~ .script-text-6, #script-tog-7:checked ~ .script-text-7, #script-tog-8:checked ~ .script-text-8, #script-tog-9:checked ~ .script-text-9, #script-tog-10:checked ~ .script-text-10, #script-tog-11:checked ~ .script-text-11, #script-tog-12:checked ~ .script-text-12, #script-tog-13:checked ~ .script-text-13, #script-tog-14:checked ~ .script-text-14, #script-tog-15:checked ~ .script-text-15 {
+    opacity: 1;
 }
