@@ -582,7 +582,7 @@ footer {
 }
 
 #script-tog-1:checked ~ .script-text-1 {
-    height: 69em
+    height: 69em;
 }
 
 /*Animations added */
