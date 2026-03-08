@@ -2,98 +2,116 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Whitmore Gallery Case</title>
-<link rel="stylesheet" href="css/design.css">
+    <title>The Whitmore Gallery Case</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/design.css">
 </head>
 
 <body>
 
-<header>
-<h1>Case File</h1>
-</header>
+    <header>
+        <label for="theme-tog">
+            <div class="button" id="theme-switch">
+                <input type="checkbox" id="theme-tog">
+                <p>Switch Theme</p>
+            </div>
+        </label>
 
-<nav>
-<div class="nav-button this-screen"><p>Case File</p></div>
+        <h1>Case File</h1>
 
-<div class="nav-button">
-<p><a href="case-board.html">Case Board</a></p>
-</div>
+        <div class="spacer">
+        </div>
+    </header>
 
-<div class="nav-button">
-<p><a href="suspects.html">Suspects</a></p>
-</div>
+    <nav>
+        <div class="nav-button this-screen">
+            <p>Case File</p>
+        </div>
 
-<div class="nav-button">
-<p><a href="evidence.html">Evidence</a></p>
-</div>
-</nav>
+        <div class="nav-button">
+            <p><a href="case-board.html">Case Board</a></p>
+        </div>
 
-<main>
+        <div class="nav-button">
+            <p><a href="suspects.html">Suspects</a></p>
+        </div>
 
-<h2>The Murder of Eleanor Whitmore</h2>
+        <div class="nav-button">
+            <p><a href="evidence.html">Evidence</a></p>
+        </div>
+    </nav>
 
-<img src="images/gallery-office.jpg" alt="Whitmore Gallery Office Crime Scene" class="case-image">
+    <main>
 
-<div id="file-text">
+        <h2>The Murder of Eleanor Whitmore</h2>
 
-<p><b>Victim:</b> Eleanor Whitmore</p>
+        <div id="file">
 
-<p>
-Eleanor Whitmore, age 29, was found dead in her private office at Whitmore Gallery on
-March 14, 2023 at approximately 9:26 PM during the gallery’s anniversary event.
-The medical examiner determined the cause of death was blunt force trauma to the back of the head.
-</p>
+            <div id="file-vic-img">
+                <img id="file-victim" src="images/gallery-office.jpg" alt="Whitmore Gallery Office Crime Scene">
+            </div>
 
-<p>
-Whitmore was the founder and sole owner of Whitmore Gallery.
-She was known for ambitious expansion plans and aggressive business strategies.
-She had recently announced a second gallery location planned for later that year.
-</p>
+            <div id="file-text">
 
-<p>
-Privately, Eleanor had been experiencing financial instability that was not visible to the public.
-Her relationships with investors, artists, and employees had become increasingly tense.
-</p>
+                <p><b>Victim:</b> Eleanor Whitmore</p>
 
-<h3>Known Relationships</h3>
+                <p>
+                    Eleanor Whitmore, age 29, was found dead in her private office at Whitmore Gallery on
+                    March 14, 2023 at approximately 9:26 PM during the gallery’s anniversary event.
+                    The medical examiner determined the cause of death was blunt force trauma to the back of the head.
+                </p>
 
-<ul>
-<li>Marcus Vale – Business Partner</li>
-<li>Lila Moreno – Featured Artist</li>
-<li>Thomas Greene – Gallery Intern</li>
-<li>Victoria Hale – Rival Gallery Owner</li>
-</ul>
+                <p>
+                    Whitmore was the founder and sole owner of Whitmore Gallery.
+                    She was known for ambitious expansion plans and aggressive business strategies.
+                    She had recently announced a second gallery location planned for later that year.
+                </p>
 
-<h3>Circumstances of the Crime</h3>
+                <p>
+                    Privately, Eleanor had been experiencing financial instability that was not visible to the public.
+                    Her relationships with investors, artists, and employees had become increasingly tense.
+                </p>
 
-<ul>
-<li>Eleanor was discovered dead inside her locked office.</li>
-<li>Security cameras were disabled from 9:05 PM – 9:58 PM.</li>
-<li>A shattered wine glass was found near the body.</li>
-<li>A message sent from Eleanor’s phone at 8:52 PM read: “Meet me in the office. We need to settle this tonight.”</li>
-<li>A bank transfer notification was sent from Eleanor’s account at 9:21 PM.</li>
-<li>The office door was locked from the inside with no signs of forced entry.</li>
-</ul>
+                <p><b>Known Relationships</b></p>
 
-<hr>
+                <ul>
+                    <li>Marcus Vale – Business Partner</li>
+                    <li>Lila Moreno – Featured Artist</li>
+                    <li>Thomas Greene – Gallery Intern</li>
+                    <li>Victoria Hale – Rival Gallery Owner</li>
+                </ul>
 
-<p>
-Review the evidence and suspects to determine who killed Eleanor Whitmore.
-</p>
+                <p><b>Circumstances of the Crime</b></p>
 
-</div>
+                <ul>
+                    <li>Eleanor was discovered dead inside her locked office.</li>
+                    <li>Security cameras were disabled from 9:05 PM – 9:58 PM.</li>
+                    <li>A shattered wine glass was found near the body.</li>
+                    <li>A message sent from Eleanor’s phone at 8:52 PM read: “Meet me in the office. We need to settle
+                        this tonight.”</li>
+                    <li>A bank transfer notification was sent from Eleanor’s account at 9:21 PM.</li>
+                    <li>The office door was locked from the inside with no signs of forced entry.</li>
+                </ul>
 
-</main>
+                <p>
+                    <b>Review the <a class="file-link" href="case-board.html">Case Board</a> or explore the
+                        <a class="file-link" href="evidence.html">Evidence</a>.
+                        When you're ready, visit the <a class="file-link" href="suspects.html">Suspects</a> page
+                        to decide who killed Eleanor Whitmore.</b>
+                </p>
 
-<footer>
+            </div>
 
-<div class="button">
-<p><a href="index.html">Exit to Home</a></p>
-</div>
+        </div>
 
-</footer>
+    </main>
+
+    <footer>
+        <div class="button">
+            <p><a href="index.html">Exit to Home</a></p>
+        </div>
+    </footer>
 
 </body>
+
 </html>
