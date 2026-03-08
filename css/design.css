@@ -212,6 +212,7 @@ footer {
 #file-victim {
     width: 100%;
     border: 2px solid var(--accent-2);
+    transition: border-color 0.5s;
 }
 
 #file-text {
