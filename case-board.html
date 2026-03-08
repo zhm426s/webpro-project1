@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Murder Mystery- Case Board</title> <!--replace with title of mystery-->
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/design.css">
-    </head>
-    <body>
-        <header>
-            <div class="button" id="theme-switch">
-                <p>Switch Theme</p>
-            </div>
-            <h1>Case Board</h1>
-        </header>
-        <nav> <!--this can be copied to case-file, suspects, and evidence, just change which button uses "this-screen"-->
-            <div class="nav-button">
-                <p><a href="case-file.html">Case File</a></p>
-            </div>
-            <div class="nav-button this-screen"> <!--placeholder button which would link to case-board screen on other pages-->
-                <p>Case Board</p>
-            </div>
-            <div class="nav-button">
-                <p><a href="suspects.html">Suspects</a></p>
-            </div>
-            <div class="nav-button">
-                <p><a href="evidence.html">Evidence</a></p>
-            </div>
-        </nav>
-        <body>
-            <div id="instructions">
-                <p>Click on a piece of evidence to view it on the evidence/suspects board.</p>
-            </div>
-            <div id="case-board">
-                <a class="board-evidence" id="" href="evidence.html#"> <!--copy this link and fill in evidence name for this piece-->
-                    <img src="images/evidence/" alt="">
-                </a>
-                <a class="board-suspect" id="" href="suspects.html"> <!--copy this link and fill in suspect name for this piece-->
-                    <img src="images/suspects/" alt="">
-                </a>
-            </div>
-            <div id="hints">
-                <h2>Hints</h2>
-                <p>Having trouble? Click on a hint to get an idea of where to look.</p>
-                <div id="hint-grid">
-                    <div class="hint-card" id="hint-"> <!--copy this div and fill in hint number/text for this hint-->
-                        <h3>Hint #</h3>
-                        <p>[Replace with hint text]</p>
-                    </div>
-                </div>
-            </div>
-        </body>
-        <footer> <!--this can be copied for case-file, suspects, and evidence-->
-            <div class="button">
-                <p><a href="index.html">Exit to Home</a></p>
-            </div>
-        </footer>
-    </body>
+
+<head>
+<meta charset="UTF-8">
+<title>Case Board</title>
+<link rel="stylesheet" href="css/design.css">
+</head>
+
+<body>
+
+<header>
+<h1>Case Board</h1>
+</header>
+
+<nav>
+<div class="nav-button"><p><a href="case-file.html">Case File</a></p></div>
+<div class="nav-button this-screen"><p>Case Board</p></div>
+<div class="nav-button"><p><a href="suspects.html">Suspects</a></p></div>
+<div class="nav-button"><p><a href="evidence.html">Evidence</a></p></div>
+</nav>
+
+<main>
+
+<h2>Timeline</h2>
+
+<ul>
+<li>8:52 PM – Eleanor sends message: “Meet me in the office. We need to settle this tonight.”</li>
+<li>9:05 PM – Security cameras disabled.</li>
+<li>9:08 PM – Lila Moreno scans out of the event.</li>
+<li>~9:12 PM – Bartender reports seeing Lila near hallway to Eleanor's office.</li>
+<li>~9:15 PM – Marcus Vale seen speaking with investors.</li>
+<li>~9:17 PM – Estimated time of Eleanor’s death.</li>
+<li>9:19 PM – Lila books a rideshare.</li>
+<li>9:21 PM – Bank transfer email sent from Eleanor’s account.</li>
+<li>9:23 PM – Victoria Hale leaves nearby area via rideshare.</li>
+<li>9:26 PM – Eleanor’s body discovered.</li>
+<li>9:58 PM – Cameras return online.</li>
+</ul>
+
+<h3>Important Questions</h3>
+
+<ul>
+<li>Who had access to the gallery security system?</li>
+<li>Who met Eleanor in her office that night?</li>
+<li>Why was a bank transfer made after her death?</li>
+<li>What object was used to strike Eleanor?</li>
+</ul>
+
+</main>
+
+<footer>
+<div class="button">
+<p><a href="index.html">Exit to Home</a></p>
+</div>
+</footer>
+
+</body>
 </html>
