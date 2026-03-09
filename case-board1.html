@@ -23,16 +23,16 @@
 
     <nav>
         <div class="nav-button">
-            <p><a href="case-file.html">Case File</a></p>
+            <p><a class="nav-link" href="case-file.html">Case File</a></p>
         </div>
         <div class="nav-button this-screen">
             <p>Case Board</p>
         </div>
         <div class="nav-button">
-            <p><a href="suspects.html">Suspects</a></p>
+            <p><a class="nav-link" href="suspects.html">Suspects</a></p>
         </div>
         <div class="nav-button">
-            <p><a href="evidence.html">Evidence</a></p>
+            <p><a class="nav-link" href="evidence.html">Evidence</a></p>
         </div>
     </nav>
 
@@ -156,29 +156,29 @@
 
             <div id="hint-grid">
 
-                <label for="hint1">
-                    <div class="hint-card">
+                <label for="hint-1-tog">
+                    <div class="hint-card" id="hint-1"> <!--copy this div and fill in hint number/text for this hint-->
                         <h3>Hint #1</h3>
-                        <input type="checkbox" id="hint1">
-                        <p>The security cameras were disabled shortly before the estimated time of death.</p>
+                        <input type="checkbox" id="hint-1-tog">
+                        <p id="hint-text-1">The security cameras were disabled shortly before the estimated time of death.</p>
                     </div>
                 </label>
 
-                <label for="hint2">
-                    <div class="hint-card">
+                <label for="hint-2-tog">
+                    <div class="hint-card" id="hint-2" for="hint-2-tog"> <!--copy this div and fill in hint number/text for this hint-->
                         <h3>Hint #2</h3>
-                        <input type="checkbox" id="hint2">
-                        <p>Someone left the building minutes after the bank transfer notification was sent.</p>
+                        <input type="checkbox" id="hint-2-tog">
+                        <p id="hint-text-2">Someone left the building minutes after the bank transfer notification was sent.</p>
                     </div>
-                </label>
+                    </label>
 
-                <label for="hint3">
-                    <div class="hint-card">
+                <label for="hint-3-tog">
+                    <div class="hint-card" id="hint-3" for="hint-3-tog"> <!--copy this div and fill in hint number/text for this hint-->
                         <h3>Hint #3</h3>
-                        <input type="checkbox" id="hint3">
-                        <p>Compare the timeline with the parking garage log.</p>
+                        <input type="checkbox" id="hint-3-tog">
+                        <p id="hint-text-3">Compare the timeline with the parking garage log.</p>
                     </div>
-                </label>
+                    </label>
 
             </div>
 
@@ -189,7 +189,7 @@
     <footer>
 
         <div class="button">
-            <p><a href="index.html">Exit to Home</a></p>
+            <p><a class="button-link" href="index.html">Exit to Home</a></p>
         </div>
 
     </footer>
