@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Whitmore Murder - Case Board</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/design.css">
+</head>
+
+<body>
+
+    <header>
+        <label for="theme-tog">
+            <div class="button" id="theme-switch">
+                <input type="checkbox" id="theme-tog">
+                <p>Switch Theme</p>
+            </div>
+        </label>
+
+        <h1>Case Board</h1>
+        <div class="spacer"></div>
+    </header>
+
+    <nav>
+        <div class="nav-button">
+            <p><a href="case-file.html">Case File</a></p>
+        </div>
+        <div class="nav-button this-screen">
+            <p>Case Board</p>
+        </div>
+        <div class="nav-button">
+            <p><a href="suspects.html">Suspects</a></p>
+        </div>
+        <div class="nav-button">
+            <p><a href="evidence.html">Evidence</a></p>
+        </div>
+    </nav>
+
+    <main>
+
+        <div id="instructions">
+            <p>Click on a piece of evidence to examine it further.</p>
+        </div>
+
+        <div id="case-board">
+
+            <!-- LEFT COLUMN -->
+            <div class="board-col">
+
+                <p class="board-label">Autopsy Report</p>
+
+                <a class="board-evidence" href="evidence.html#evidence1">
+                    <img class="board-ev-image" src="images/autopsy-report.jpg" alt="autopsy report">
+                </a>
+
+                <p class="board-label">Messages</p>
+
+                <div id="ev-grid">
+
+                    <a class="board-evidence" href="evidence.html#evidence2">
+                        <img class="board-ev-image" src="images/eleanor-text.png" alt="text messages">
+                    </a>
+
+                    <a class="board-evidence" href="evidence.html#evidence3">
+                        <img class="board-ev-image" src="images/email.png" alt="email">
+                    </a>
+
+                    <a class="board-evidence" href="evidence.html#evidence4">
+                        <img class="board-ev-image" src="images/bank-transfer.jpg" alt="bank transfer">
+                    </a>
+
+                    <a class="board-evidence" href="evidence.html#evidence5">
+                        <img class="board-ev-image" src="images/admin-code.jpg" alt="security alert">
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CENTER COLUMN -->
+            <div class="board-col">
+
+                <img id="victim" src="images/eleanor.jpg" alt="Eleanor Harlow">
+
+                <p class="board-label">Victim: Eleanor Harlow</p>
+
+                <a class="board-evidence" href="evidence.html#weapon">
+                    <img class="board-ev-image" id="weapon-img" src="images/broken-wine-glass.jpg" alt="broken wine glass">
+                </a>
+
+                <p class="board-label">Possible Weapon</p>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="board-col">
+
+                <p class="board-label">Statements</p>
+
+                <a class="board-evidence" href="evidence.html#evidence6">
+                    <img class="board-ev-image" src="images/guest-statement.jpg" alt="guest statement">
+                </a>
+
+                <a class="board-evidence" href="evidence.html#evidence7">
+                    <img class="board-ev-image" src="images/staff-statement.jpg" alt="staff statement">
+                </a>
+
+                <a class="board-evidence" href="evidence.html#evidence8">
+                    <img class="board-ev-image" src="images/event-checkin.jpg" alt="event check in log">
+                </a>
+
+                <a class="board-evidence" href="evidence.html#evidence9">
+                    <img class="board-ev-image" src="images/parking-log.jpg" alt="parking log">
+                </a>
+
+            </div>
+
+
+            <!-- SUSPECT COLUMN -->
+            <div class="board-col" id="sus-col">
+
+                <p class="board-label">Suspects</p>
+
+                <div id="sus-grid">
+
+                    <a class="board-suspect" href="suspects.html#suspect1">
+                        <img class="board-sus-image" src="images/suspect-lila.jpg" alt="Lila Moreno">
+                    </a>
+
+                    <a class="board-suspect" href="suspects.html#suspect2">
+                        <img class="board-sus-image" src="images/suspect-marcus.jpg" alt="Marcus Reed">
+                    </a>
+
+                    <a class="board-suspect" href="suspects.html#suspect3">
+                        <img class="board-sus-image" src="images/suspect-victoria.jpg" alt="Victoria Hale">
+                    </a>
+
+                    <a class="board-suspect" href="suspects.html#suspect4">
+                        <img class="board-sus-image" src="images/suspect-thomas.jpg" alt="Thomas Keller">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="hints">
+
+            <h2>Hints</h2>
+
+            <p>Need help? Click a hint.</p>
+
+            <div id="hint-grid">
+
+                <label for="hint1">
+                    <div class="hint-card">
+                        <h3>Hint #1</h3>
+                        <input type="checkbox" id="hint1">
+                        <p>The security cameras were disabled shortly before the estimated time of death.</p>
+                    </div>
+                </label>
+
+                <label for="hint2">
+                    <div class="hint-card">
+                        <h3>Hint #2</h3>
+                        <input type="checkbox" id="hint2">
+                        <p>Someone left the building minutes after the bank transfer notification was sent.</p>
+                    </div>
+                </label>
+
+                <label for="hint3">
+                    <div class="hint-card">
+                        <h3>Hint #3</h3>
+                        <input type="checkbox" id="hint3">
+                        <p>Compare the timeline with the parking garage log.</p>
+                    </div>
+                </label>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="button">
+            <p><a href="index.html">Exit to Home</a></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
