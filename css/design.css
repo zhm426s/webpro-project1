@@ -136,9 +136,12 @@ a:link {
     color: var(--accent-1);
 }
 
+.button-link:focus, .hint-card > p > a:focus, .nav-link:focus, .arrest-button > a:focus {
+    color: var(--accent-3);
+}
+
 a:focus {
     background: var(--focus-color);
-    color: var(--accent-3);
     outline: 2px solid var(--focus-color);
     border-radius: 2px;
 }
